@@ -1,26 +1,19 @@
-import React from 'react';
-import logo from './logo.svg';
+import React, {useContext} from 'react';
 import './App.css';
-
+import NavbarComplete from './styled/Navbar/NavbarComplete'
+import PageRouter from './pages/PageRouter'
+import GlobalStyle from './styled/GlobalStyle'
+import {Context} from './Context'
 function App() {
+  const {theme} = useContext(Context)
+  const lights = theme === 'light' ? 'rgba(0, 0, 0, 0.400)' : 'rbg(0,0,0)';
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    <>
+        <GlobalStyle lights={lights}/> 
+        <NavbarComplete />
+        <PageRouter />
+    </>
+  )
 }
 
 export default App;
