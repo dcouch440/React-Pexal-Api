@@ -2,7 +2,6 @@ import React from 'react'
 import TrendingVideoStyles from './TrendingVideoStyles'
 import useEverScroll from '../../api/useEverScroll'
 
-
 const TrendingVideos = () => {
     const [bottomBoundaryRef, lazyRef, vidData] = useEverScroll({dataType: 'TRENDING_VIDEO'})
 
@@ -17,7 +16,6 @@ const TrendingVideos = () => {
             )
         }
     )
-       
     return (
         <>
             <TrendingVideoStyles>

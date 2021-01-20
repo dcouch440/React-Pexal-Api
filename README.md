@@ -1,8 +1,95 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# React Pexal Api App Using Css Flex Box
 
-## Available Scripts
 
-In the project directory, you can run:
+#### Author: David Couch
+
+### Description
+
+#### This app is an example of using Pexal Api to display images that are loaded from pexals Free Api.
+
+### Technology Used:
+- HTML
+- CSS
+- JAVASCRIPT
+- REACT
+- STYLED COMPONENTS
+
+
+### Note: This Aplication Requires an api key to the access content.
+##### Get your pexal Api Key At ( https://www.pexels.com/api/ )
+___
+
+## Installation :
+* Go to ( https://github.com/dcouch440/React-PexelApi-CssFlexbox.git ).
+
+*  Navigate to the code button on the github website.\
+![Code buton](src/img/readme/code.PNG)
+
+* Click on the code button to open the menu.\
+![Github Repo Example](/src/img/readme/Pexal-instruction.PNG)
+
+- Copy the HTTPS code by clicking the clipboard next to the link.
+
+- Within your Bash terminal navigate to your desired location by using cd fallowed by your desired directory.
+
+```bash
+ cd Desktop
+``` 
+
+- Once you have chosen your desired directory use the command.
+```bash 
+git clone https://github.com/dcouch440/React-PexelApi-CssFlexbox.git
+```
+
+<div 
+  style="
+    background-color: #d1ecf1; 
+    color: grey; padding: 6px; 
+    font-size: 9px; 
+    border-radius: 5px; 
+    border: 1px solid #d4ecf1; 
+    margin-bottom: 12px"
+> 
+  <span 
+    style="
+      font-size: 12px; 
+      font-weight: 600; 
+      color: #0c5460;"
+  >
+    ⓘ
+  </span>
+  <span 
+    style="
+      font-size: 12px; 
+      font-weight: 900; 
+      color: #0c5460;
+      margin-bottom: 24px"
+  >
+    Note : 
+  </span> 
+  If you have any problems make sure your HTTPS code is correct! The example above might not be the most recent HTTPS code!
+</div>
+
+
+* Then after the proccess is completed use the command.
+
+``` bash
+code .
+```
+
+* This will open the directory in your default code editor.
+
+* After you have the file open in your project editor navigate to the file Context.js in the /src directory
+
+* from here remove the the words shown in the example and replace it with the api key you receive from pexal
+
+![Api Button](src/img/readme/ApiKey.PNG)
+
+* Now run the fallowing code
+
+``` bash
+npm start
+```
 
 ### `npm start`
 
@@ -37,32 +124,24 @@ Instead, it will copy all the configuration files and the transitive dependencie
 
 You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
 
-## Learn More
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+The MIT License (MIT)
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+Copyright (c) 2021 David Couch
 
-### Code Splitting
+Permission is hereby granted, free of charge, to any person obtaining a copy of
+this software and associated documentation files (the "Software"), to deal in
+the Software without restriction, including without limitation the rights to
+use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of
+the Software, and to permit persons to whom the Software is furnished to do so,
+subject to the following conditions:
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
 
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS
+FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR
+COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER
+IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN
+CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.

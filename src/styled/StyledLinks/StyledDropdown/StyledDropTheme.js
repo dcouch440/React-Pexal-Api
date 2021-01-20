@@ -19,12 +19,10 @@ const StyledCog = styled.div`
 `
 export const StyledDropTheme = () => {
     const {handleTheme} = useTheme()
-    const text = () => (  
-
+    const text = () => (
             <StyledCog>
                 <span>Lights <i class="fas fa-lightbulb"></i> </span>
             </StyledCog>
- 
     )
     return (
         <StyledDropLink 

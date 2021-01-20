@@ -3,13 +3,11 @@ import DropDownMenu from './Components/DropDownMenu'
 import StyledTransGoldRimButton from './Components/StyledTransGoldRimButton'
 import styled from 'styled-components'
 
-
 const DropdownStyles = styled.div`
   .Component-Container {
     position: relative;
     display: inline-block
   }
-
   .hide-me {
     display: none;
   }

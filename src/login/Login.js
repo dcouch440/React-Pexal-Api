@@ -1,6 +1,6 @@
-import React, {useState, useContext} from 'react'
-import {StyledGoldButton} from '../styled/Buttons/StyledGoldButton'
-import {StyledTextInput} from '../styled/LoginFormStyled/StyledInputs/StyledTextInput'
+import React, { useState } from 'react'
+import { StyledGoldButton } from '../styled/Buttons/StyledGoldButton'
+import { StyledTextInput } from '../styled/LoginFormStyled/StyledInputs/StyledTextInput'
 import styled from 'styled-components'
 
 const FormStyle = styled.div`
@@ -20,7 +20,6 @@ const FormStyle = styled.div`
             text-align: center;
         }
 `
-
 function Login(){
     
     const [text, setText] = useState({
@@ -38,8 +37,6 @@ function Login(){
             setText({[name]: checked})
         :   setText({[name]: value}) 
     }
-    
-    
     return (
         <FormStyle>
             <form onSubmit={(event) => handleSubmit(event)}>

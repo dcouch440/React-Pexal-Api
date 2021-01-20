@@ -1,6 +1,6 @@
 import React from 'react'
 import TrendingPhotosApiMap from './TrendingPhotosApiMap'
-import {StyledPinkGradient} from '../../styled/StyledBackground/StyledPinkGradient/StyledPinkGradient'
+import { StyledPinkGradient } from '../../styled/StyledBackground/StyledPinkGradient/StyledPinkGradient'
 
 const TrendingPhotos = () => {
     return (

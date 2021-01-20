@@ -1,6 +1,6 @@
 import { useEffect, useReducer, useCallback, useRef, useContext } from 'react'
 import { useApi } from './useApi'
-import {Context} from '../Context'
+import { Context } from '../Context'
 
 const useEverScroll = ({dataType}) => {
     const {searchQuery} = useContext(Context)
@@ -15,8 +15,7 @@ const useEverScroll = ({dataType}) => {
             default:
                 return state;
         }
-    }
-       
+    }      
     const pageReducer = (state, action) => {
         switch (action.type) {
             case 'ADVANCE_PAGE':
@@ -25,10 +24,9 @@ const useEverScroll = ({dataType}) => {
                     return state;
         }
     }
-
+    
     const [ pager, pagerDispatch ] = useReducer(pageReducer, { page: 1 })
     const [dataStacked, dataDispatch] = useReducer(reducer, { stackData:[], fetching: true})
-
     useEffect(() => {
         dataDispatch({type: 'FETCHING_DATA', fetching: true})
         const fetchData = new Promise((resolve) => {
@@ -48,10 +46,9 @@ const useEverScroll = ({dataType}) => {
             dataDispatch({type: 'FETCHING_DATA', fetching: false})
             return e
         })
+    // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [dataDispatch, pager.page, searchQuery])
-    
-    // logic that finds the intersection 
-    
+
     let bottomBoundaryRef = useRef(null);
     const scrollObserver = useCallback(
         node => {
@@ -64,16 +61,13 @@ const useEverScroll = ({dataType}) => {
             }).observe(node)
         }, [pagerDispatch]
     )
-
+    
     useEffect(() => {
         if (bottomBoundaryRef.current) {
             scrollObserver(bottomBoundaryRef.current)
         }
     }, [scrollObserver, bottomBoundaryRef])
     
-    // lazy loads images with intersection observer
-    // only swap out the image source if the new url exists
-
     const lazyRef = useRef([])
     const observer = useCallback(node => {
         const intObs = new IntersectionObserver(entries => {
@@ -93,15 +87,14 @@ const useEverScroll = ({dataType}) => {
         })
         intObs.observe(node)
     }, [])
-    
+
     useEffect(() => {
         if (lazyRef.current) {
             lazyRef.current.forEach(data => observer(data))
         }
     }, [observer, lazyRef, dataStacked.StackData])
-
+    
     return [bottomBoundaryRef, lazyRef, dataStacked]
-
 }
 
 export default useEverScroll 

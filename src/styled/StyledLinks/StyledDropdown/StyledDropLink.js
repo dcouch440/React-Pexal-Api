@@ -10,7 +10,6 @@ export const StyledDropLink = styled(BasicDropLink)`
     background-color: transparent;
     border-top: .1px solid #8080806b;
     font-size: calc(10px + 2vmin);
-
     .container {
         display: flex;
         padding: 1px 0px;

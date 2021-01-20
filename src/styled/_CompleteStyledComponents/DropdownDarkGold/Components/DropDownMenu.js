@@ -21,20 +21,6 @@ const Container = styled.div`
         right: 102%;
     }
 
-        @media only screen and (max-width: 550px) {
-           /* * {
-               font-size: 14px;
-               padding: 5;
-               max-width: 250px;
-           }
-           .housing {
-               border: none;
-               box-shadow: none;
-           }
-           a {
-               font-size: 12px;
-           } */
-        }
 `;
 
 const DropDownMenu = ()  =>  {

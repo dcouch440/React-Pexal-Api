@@ -1,8 +1,8 @@
 import React, {useState, useEffect, useContext} from 'react'
 import styled from 'styled-components'
-import {Context} from '../../Context'
+import { Context } from '../../Context'
 import { createClient } from 'pexels'
-import {Link} from 'react-router-dom'
+
 const ImageStyles = styled.div`
     width: 100%;
     height: 100%;
@@ -180,16 +180,13 @@ const HomeImageApiMap = () => {
                 <div className='picture-left'>
                     {images[startInterval]}
                 </div>
-                    <div className='picture-center'>
-                   
-                        {images[currentInterval]}
-                        
-                            <a href={'/photos'} className='enter-button'>
-                                Enter    
-                            </a>
-                      
-                        {response.length > 0 && <a className='link' href={response[currentInterval].photographer_url}>{response[currentInterval].photographer}</a>}
-                    </div>
+                <div className='picture-center'>
+                    {images[currentInterval]}                       
+                        <a href={'/photos'} className='enter-button'>
+                            Enter    
+                        </a>
+                    {response.length > 0 && <a className='link' href={response[currentInterval].photographer_url}>{response[currentInterval].photographer}</a>}
+                </div>
                 <div className='picture-right'>
                     {images[endInterval]}
                 </div>
@@ -199,11 +196,9 @@ const HomeImageApiMap = () => {
     return (
         <>
             <ImageStyles>
-                    {picturedBehind()}
+                {picturedBehind()}
             </ImageStyles>
         </>
-    )
-       
-    
+    )  
 }
 export default HomeImageApiMap

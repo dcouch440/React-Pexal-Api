@@ -1,7 +1,7 @@
-import React, {useContext} from 'react'
-import {StyledPinkGradient} from '../../styled/StyledBackground/StyledPinkGradient/StyledPinkGradient'
+import React, { useContext } from 'react'
+import { StyledPinkGradient } from '../../styled/StyledBackground/StyledPinkGradient/StyledPinkGradient'
 import TrendingVideosApiMap from './TrendingVideosApiMap'
-import {Context} from '../../Context'
+import { Context } from '../../Context'
 
 const TrendingVideos = () => {
     const {backgroundImage} = useContext(Context) 
