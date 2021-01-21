@@ -8,6 +8,7 @@ function ContextProvider(props) {
     const [navOpen, setNavOpen] = useState(false)
     const [searchQuery, setSearchQuery] = useState('default')
     const themeReverse = theme === 'light' ? 'dark' : 'light'
+    // KEY HERE
     const API_KEY = process.env.REACT_APP_API_KEY
 
     return (

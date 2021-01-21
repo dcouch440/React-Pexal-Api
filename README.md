@@ -1,6 +1,5 @@
 # React Pexal Api App Using Css Flex Box
 
-
 #### Author: David Couch
 
 ### Description
@@ -15,7 +14,7 @@
 - STYLED COMPONENTS
 
 
-### Note: This Aplication Requires an api key to the access content.
+### Note: This Aplication Requires an api key to the access content when loading from your own editor.
 ##### Get your pexal Api Key At ( https://www.pexels.com/api/ )
 ___
 
@@ -81,9 +80,16 @@ code .
 
 * After you have the file open in your project editor navigate to the file Context.js in the /src directory
 
-* from here remove the the words shown in the example and replace it with the api key you receive from pexal
+* After finding the API_KEY variable (shown below) replace the code with your own between quotes
 
 ![Api Button](src/img/readme/ApiKey.PNG)
+
+* Your variable should look like this when your done but with your own key!
+
+```javascript
+// EXAMPLE KEY ONLY
+const API_KEY = '3636922d5426672001gfismv64b3cb8d74154c398f838d1df9540346'
+`````
 
 * Now run the fallowing code
 
