@@ -12,9 +12,10 @@
 - JAVASCRIPT
 - REACT
 - STYLED COMPONENTS
+- REACT ROUTER
 
-### Note: This Aplication Requires an api key to the access content when loading from your own editor.
-##### `Get your pexal Api Key At ( https://www.pexels.com/api/ )`
+### Note: This aplication requires an api key to access the content 
+##### `Get your pexal Api Key At https://www.pexels.com/api/`
 ___
 
 ## Installation :
