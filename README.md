@@ -82,7 +82,7 @@ code .
 
 * After you have the file open in your project editor navigate to the file Context.js in the /src directory\
 \
-![Context Folder](src/img/readme/Context.PNG)
+![Context Folder](src/img/readme/context.PNG)
 * After finding the API_KEY variable (shown below) replace the code with your own between quotes
 
 ![Api Button](src/img/readme/ApiKey.PNG)
