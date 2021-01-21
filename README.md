@@ -13,7 +13,6 @@
 - REACT
 - STYLED COMPONENTS
 
-
 ### Note: This Aplication Requires an api key to the access content when loading from your own editor.
 ##### Get your pexal Api Key At ( https://www.pexels.com/api/ )
 ___
@@ -98,6 +97,7 @@ npm start
 ```
 
 ### `npm start`
+
 
 Runs the app in the development mode.<br />
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
