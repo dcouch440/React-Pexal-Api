@@ -106,7 +106,11 @@ npm start
 
 
 ***
-
+![pexal screenshot](src/img/readme/pexalsHome1.PNG)
+***
+![pexal screenshot](src/img/readme/pexalsPictures2.PNG)
+***
+![pexal screenshot](src/img/readme/pexalsPictures3.PNG)
 ***
 
 ### `npm start`
