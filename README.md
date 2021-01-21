@@ -14,12 +14,11 @@
 - STYLED COMPONENTS
 - REACT ROUTER
 
-###### This Software uses npm pexal api software. After the data is received it is sorted in an an object with functions made to emulate the efficacy of redux dispatch methods. After the data is sorted images are rendered on the page and an intersection observer is used to check if more data is needed. More request will be made to suite the need of the page. This project displays the use of useRef, useEffect, useReducer, useCallback, useRef, useContext, extensive looping and working with renders as object data changes.
-***
+#### This Software uses npm pexal api software. After the data is received it is sorted in an an object with functions made to emulate the efficacy of redux dispatch methods. After the data is sorted images are rendered on the page and an intersection observer is used to check if more data is needed. More request will be made to suite the need of the page. This project displays the use of useRef, useEffect, useReducer, useCallback, useRef, useContext, extensive looping and working with renders as object data changes.
 
+***
 ### Note: This application requires an api key to access the content 
 ##### `Get your pexal Api Key At https://www.pexels.com/api/`
-___
 
 ## Installation :
 * Go to ( https://github.com/dcouch440/React-Pexal-Api.git ).
@@ -81,8 +80,9 @@ code .
 * This will open the directory in your default code editor.
 
 * After you have the file open in your project editor navigate to the file Context.js in the /src directory\
-\
+
 ![Context Folder](src/img/readme/context.PNG)
+
 * After finding the API_KEY variable (shown below) replace the code with your own between quotes
 
 ![Api Button](src/img/readme/ApiKey.PNG)
@@ -147,6 +147,8 @@ If you aren’t satisfied with the build tool and configuration choices, you can
 Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
 
 You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+\
+***
 
 The MIT License (MIT)
 
