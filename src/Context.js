@@ -9,7 +9,7 @@ function ContextProvider(props) {
     const [searchQuery, setSearchQuery] = useState('default')
     const themeReverse = theme === 'light' ? 'dark' : 'light'
     // KEY HERE
-    const API_KEY = process.env.REACT_APP_API_KEY
+    const API_KEY = 'API KEY HERE'
 
     return (
         <Context.Provider value={{
