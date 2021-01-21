@@ -103,7 +103,7 @@ npm start
 ```
 
 
-* Congradultions you are ready to go!
+* congratulations you are ready to go!
 
 
 ***
