@@ -18,7 +18,7 @@
 ___
 
 ## Installation :
-* Go to ( https://github.com/dcouch440/React-PexelApi-CssFlexbox.git ).
+* Go to ( https://github.com/dcouch440/React-Pexal-Api.git ).
 
 *  Navigate to the code button on the github website.\
 ![Code buton](src/img/readme/code.PNG)
@@ -36,7 +36,7 @@ ___
 
 - Once you have chosen your desired directory use the command.
 ```bash 
-git clone https://github.com/dcouch440/React-PexelApi-CssFlexbox.git
+git clone https://github.com/dcouch440/React-Pexal-Api.git
 ```
 
 <div 
