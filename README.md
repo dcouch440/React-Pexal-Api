@@ -2,11 +2,11 @@
 
 #### Author: David Couch
 
-### Description
+## Description
+***
+#### This app is an example of using Pexal Api to display images that are loaded from pexals Free `limited` Api.
 
-#### This app is an example of using Pexal Api to display images that are loaded from pexals Free Api.
-
-### Technology Used:
+### `Technology Used:`
 - HTML
 - CSS
 - JAVASCRIPT
@@ -14,18 +14,21 @@
 - STYLED COMPONENTS
 - REACT ROUTER
 
-### Note: This aplication requires an api key to access the content 
+###### This Software uses npm pexal api software. After the data is received it is sorted in an an object with functions made to emulate the efficacy of redux dispatch methods. After the data is sorted images are rendered on the page and an intersection observer is used to check if more data is needed. More request will be made to suite the need of the page. This project displays the use of useRef, useEffect, useReducer, useCallback, useRef, useContext, extensive looping and working with renders as object data changes.
+***
+
+### Note: This application requires an api key to access the content 
 ##### `Get your pexal Api Key At https://www.pexels.com/api/`
 ___
 
 ## Installation :
 * Go to ( https://github.com/dcouch440/React-Pexal-Api.git ).
 
-*  Navigate to the code button on the github website.\
+*  Navigate to the code button on the Github website.\
 ![Code buton](src/img/readme/code.PNG)
 
 * Click on the code button to open the menu.\
-![Github Repo Example](/src/img/readme/Pexal-instruction.PNG)
+![Github Repo Example](src/img/readme/Pexal-instruction.PNG)
 
 - Copy the HTTPS code by clicking the clipboard next to the link.
 
@@ -69,8 +72,7 @@ git clone https://github.com/dcouch440/React-Pexal-Api.git
   If you have any problems make sure your HTTPS code is correct! The example above might not be the most recent HTTPS code!
 </div>
 
-
-* Then after the proccess is completed use the command.
+* Then after the process is completed use the command.
 
 ``` bash
 code .
@@ -78,8 +80,9 @@ code .
 
 * This will open the directory in your default code editor.
 
-* After you have the file open in your project editor navigate to the file Context.js in the /src directory
-
+* After you have the file open in your project editor navigate to the file Context.js in the /src directory\
+\
+![Context Folder](src/img/readme/Context.PNG)
 * After finding the API_KEY variable (shown below) replace the code with your own between quotes
 
 ![Api Button](src/img/readme/ApiKey.PNG)
@@ -102,9 +105,7 @@ npm install
 npm start
 ```
 
-
 * congratulations you are ready to go!
-
 
 ***
 ![pexal screenshot](src/img/readme/pexalsHome1.PNG)
@@ -115,7 +116,6 @@ npm start
 ***
 
 ### `npm start`
-
 
 Runs the app in the development mode.\
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
@@ -148,7 +148,6 @@ Instead, it will copy all the configuration files and the transitive dependencie
 
 You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
 
-
 The MIT License (MIT)
 
 Copyright (c) 2021 David Couch
@@ -169,3 +168,5 @@ FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR
 COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER
 IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN
 CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+
+
