@@ -1,17 +1,18 @@
-import React, { useState } from 'react'
-import { TrendingPhotosStyles } from './TrendingPhotosStyles'
-import useEverScroll from '../../api/useEverScroll'
+import React, { useState } from 'react';
+import { TrendingPhotosStyles } from './TrendingPhotosStyles';
+import useEverScroll from '../../api/useEverScroll';
 
 const TrendingPhotosApiMap = () => {
-    const [modal, setModal] = useState(0)
-    const [toggleShow, setToggleShow] = useState('none')
-    const [bottomBoundaryRef, lazyRef, imgData] = useEverScroll({dataType: 'TRENDING_IMAGES'})
+    const [modal, setModal] = useState(0);
+    const [toggleShow, setToggleShow] = useState('none');
+    const [bottomBoundaryRef, lazyRef, imgData] = useEverScroll({dataType: 'TRENDING_IMAGES'});
 
     const handleClick = (i = 0) => {
-        setModal(i)
-        setToggleShow(prevState => prevState === 'none' ? null : 'none')
+        setModal(i);
+        setToggleShow(prevState => prevState === 'none' ? null : 'none');
     }
-    const imagesMapped =  imgData.stackData.length > 0 && imgData.stackData.map(
+
+    const imagesMapped =  (imgData.stackData.length > 0) && imgData.stackData.map(
         (data, i) => {
             return(
             <div key={i} ref={el => lazyRef.current[i] = el} className={'image-container'}>
@@ -23,8 +24,9 @@ const TrendingPhotosApiMap = () => {
                     <img src={data.src.large} alt='Trending' />
                 </button>
             </div>
-        )}
-    )
+            )
+        }
+    );
     return (
         <>
             <TrendingPhotosStyles>
@@ -53,9 +55,9 @@ const TrendingPhotosApiMap = () => {
                     <br />
                     <br />
                     <div style={{width: '0px', height: '0px'}} id='page-bottom-boundary' ref={bottomBoundaryRef}></div>
-                </div>      
+                </div>
             </TrendingPhotosStyles>
         </>
-    ) 
+    );
 }
-export default TrendingPhotosApiMap
+export default TrendingPhotosApiMap;

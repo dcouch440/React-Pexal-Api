@@ -4,6 +4,7 @@
 
 ## Description
 ***
+
 #### This app is an example of using Pexal Api to display images that are loaded from pexals Free `limited` Api.
 
 ### `Technology Used:`
@@ -17,7 +18,7 @@
 #### This Software uses npm pexal api software. After the data is received it is sorted in an an object with functions made to emulate the efficacy of redux dispatch methods. After the data is sorted images are rendered on the page and an intersection observer is used to check if more data is needed. More request will be made to suite the need of the page. This project displays the use of useRef, useEffect, useReducer, useCallback, useRef, useContext, extensive looping and working with renders as object data changes.
 
 ***
-### Note: This application requires an api key to access the content 
+### Note: This application requires an api key to access the content
 ##### `Get your pexal Api Key At https://www.pexels.com/api/`
 
 ## Installation :
@@ -35,39 +36,39 @@
 
 ```bash
  cd Desktop
-``` 
+```
 
 - Once you have chosen your desired directory use the command.
-```bash 
+```bash
 git clone https://github.com/dcouch440/React-Pexal-Api.git
 ```
 
-<div 
+<div
   style="
-    background-color: #d1ecf1; 
-    color: grey; padding: 6px; 
-    font-size: 9px; 
-    border-radius: 5px; 
-    border: 1px solid #d4ecf1; 
+    background-color: #d1ecf1;
+    color: grey; padding: 6px;
+    font-size: 9px;
+    border-radius: 5px;
+    border: 1px solid #d4ecf1;
     margin-bottom: 12px"
-> 
-  <span 
+>
+  <span
     style="
-      font-size: 12px; 
-      font-weight: 600; 
+      font-size: 12px;
+      font-weight: 600;
       color: #0c5460;"
   >
     ⓘ
   </span>
-  <span 
+  <span
     style="
-      font-size: 12px; 
-      font-weight: 900; 
+      font-size: 12px;
+      font-weight: 900;
       color: #0c5460;
       margin-bottom: 24px"
   >
-    Note : 
-  </span> 
+    Note :
+  </span>
   If you have any problems make sure your HTTPS code is correct! The example above might not be the most recent HTTPS code!
 </div>
 
@@ -94,7 +95,7 @@ code .
 const API_KEY = '1234IAMAKEY1234'
 ```
 
-* Now run the fallowing code in the terminal you started with or feel free to use the terminal of the code editor you are using. Just make sure you are within the project directory! 
+* Now run the fallowing code in the terminal you started with or feel free to use the terminal of the code editor you are using. Just make sure you are within the project directory!
 
 ```bash
 npm install
@@ -106,6 +107,13 @@ npm start
 ```
 
 * congratulations you are ready to go!
+
+## Whats next?
+
+* Working login database.
+* framework moved into rails.
+* videos play on hover.
+# Preview
 
 ***
 ![pexal screenshot](src/img/readme/pexalsHome1.PNG)

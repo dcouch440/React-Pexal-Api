@@ -1,10 +1,10 @@
-import { useEffect, useReducer, useCallback, useRef, useContext } from 'react'
-import { useApi } from './useApi'
-import { Context } from '../Context'
+import { useEffect, useReducer, useCallback, useRef, useContext } from 'react';
+import { useApi } from './useApi';
+import { Context } from '../Context';
 
 const useEverScroll = ({dataType}) => {
-    const {searchQuery} = useContext(Context)
-    const {trendingPhoto, trendingVideo} = useApi()
+    const {searchQuery} = useContext(Context);
+    const {trendingPhoto, trendingVideo} = useApi();
 
     const reducer = (state, action) => {
         switch (action.type) {
@@ -36,7 +36,7 @@ const useEverScroll = ({dataType}) => {
             if (dataType === 'TRENDING_IMAGES') {
                 trendingPhoto({perPage: 16, currentPage: pager.page}).then(data => resolve(data))
             }
-        })
+        });
         fetchData.then((data) =>  {
             const videoData = data
             dataDispatch({type: 'STACK_DATA', videoData})
@@ -47,7 +47,7 @@ const useEverScroll = ({dataType}) => {
             return e
         })
     // eslint-disable-next-line react-hooks/exhaustive-deps
-    }, [dataDispatch, pager.page, searchQuery])
+    }, [dataDispatch, pager.page, searchQuery]);
 
     let bottomBoundaryRef = useRef(null);
     const scrollObserver = useCallback(
@@ -58,15 +58,15 @@ const useEverScroll = ({dataType}) => {
                         pagerDispatch({ type: 'ADVANCE_PAGE' })
                     }
                 })
-            }).observe(node)
+            }).observe(node);
         }, [pagerDispatch]
-    )
+    );
 
     useEffect(() => {
         if (bottomBoundaryRef.current) {
             scrollObserver(bottomBoundaryRef.current)
         }
-    }, [scrollObserver, bottomBoundaryRef])
+    }, [scrollObserver, bottomBoundaryRef]);
 
     const lazyRef = useRef([])
     const observer = useCallback(node => {
@@ -84,17 +84,17 @@ const useEverScroll = ({dataType}) => {
                     intObs.unobserve(node); // detach the observer when done
                 }
             })
-        })
+        });
         intObs.observe(node)
-    }, [])
+    }, []);
 
     useEffect(() => {
         if (lazyRef.current) {
             lazyRef.current.forEach(data => observer(data))
         }
-    }, [observer, lazyRef, dataStacked.StackData])
+    }, [observer, lazyRef, dataStacked.StackData]);
 
-    return [bottomBoundaryRef, lazyRef, dataStacked]
+    return [bottomBoundaryRef, lazyRef, dataStacked];
 }
 
-export default useEverScroll
+export default useEverScroll;

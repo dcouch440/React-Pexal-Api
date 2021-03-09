@@ -3,7 +3,7 @@ import TrendingVideoStyles from './TrendingVideoStyles';
 import useEverScroll from '../../api/useEverScroll';
 
 const TrendingVideos = () => {
-    const [bottomBoundaryRef, lazyRef, vidData] = useEverScroll({dataType: 'TRENDING_VIDEO'})
+    const [bottomBoundaryRef, lazyRef, vidData] = useEverScroll({dataType: 'TRENDING_VIDEO'});
 
     const displayMedia = vidData.stackData.length > 0 && vidData.stackData.map(
         (data, i) => {
@@ -13,7 +13,7 @@ const TrendingVideos = () => {
                         <source src={data.video_files[0].link} type={data.video_files[0].file_type} />
                     </video>
                 </div>
-            )
+            );
         }
     );
     return (
