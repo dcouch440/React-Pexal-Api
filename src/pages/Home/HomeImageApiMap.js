@@ -6,7 +6,6 @@ import { createClient } from 'pexels'
 const ImageStyles = styled.div`
     width: 100%;
     height: 100%;
-    
     .background-image img {
         z-index: -1;
         height: 100%;
@@ -20,7 +19,7 @@ const ImageStyles = styled.div`
         position: relative;
         justify-content: center;
         height: 100%;
-        width: 100%;  
+        width: 100%;
     }
     .picture-left img {
         position: absolute;
@@ -28,7 +27,7 @@ const ImageStyles = styled.div`
         left: 0%;
         height: 100%;
         width: auto;
-        max-width: 100%; 
+        max-width: 100%;
         filter: blur(5px);
     }
     .picture-center img {
@@ -39,9 +38,9 @@ const ImageStyles = styled.div`
         width: auto;
         max-height: 95%;
         max-width: 60%;
-        position:absolute; 
-        left:50%; 
-        top:50%; 
+        position:absolute;
+        left:50%;
+        top:50%;
         transform: translate(-50%, -50%);
         object-fit: cover;
     }
@@ -52,7 +51,6 @@ const ImageStyles = styled.div`
                 height: auto;
             }
         }
-
     .center-image-container {
         height: auto;
         width: auto;
@@ -64,7 +62,7 @@ const ImageStyles = styled.div`
         right: 0%;
         height: 100%;
         width: auto;
-        max-width: 100%; 
+        max-width: 100%;
         object-fit: cover;
         filter: blur(5px);
     }
@@ -98,7 +96,7 @@ const ImageStyles = styled.div`
                     width: 100%;
                 }
             }
-        .link { 
+        .link {
         z-index: 1001;
         border: 1px solid goldenrod;
         padding: 5px;
@@ -129,21 +127,20 @@ const HomeImageApiMap = () => {
     useEffect(() => {
         if (response.length < 1) {
             const fetchData = new Promise((resolve, reject) => {
-                const responseData = createClient(API_KEY).photos.curated() 
-                resolve(responseData)
-                reject(console.log('No response HomeImageApiMap.js'))
+                const responseData = createClient(API_KEY).photos.curated();
+                resolve(responseData);
+                reject(console.log('No response HomeImageApiMap.js'));
             })
             fetchData.then((data) =>  {
                 setResponse(data.photos)
                 console.log(data.photos)
                 console.log(response)
-            }) 
+            });
         }
     // eslint-disable-next-line react-hooks/exhaustive-deps
-    }, [])
-
+    }, []);
     useEffect(() => {
-        setTimeout(() => {   
+        setTimeout(() => {
             if (count === 0) {
                 setCount(1)
             }
@@ -156,34 +153,30 @@ const HomeImageApiMap = () => {
                 }
             }
         }, 3000)
-        
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-    }, [count])
-   
+    }, [count]);
     const mappedData = response.length > 1 && response.map(
         data => (
             <>
                 <img src={data.src.large2x} alt='ss'/>
             </>
-        ))
-   
+        ));
     const picturedBehind = (images = mappedData) => {
-        const startInterval = count === 0 ? mappedData.length -  1 : count - 1
-        const currentInterval = count
-        const endInterval = count === mappedData.length - 1 ? 0 : count + 1
+        const startInterval = count === 0 ? mappedData.length -  1 : count - 1;
+        const currentInterval = count;
+        const endInterval = count === mappedData.length - 1 ? 0 : count + 1;
 
         return (
             <div className='pictures-container'>
                 <div className='background-image'>
-                    {images[currentInterval]}    
+                    {images[currentInterval]}
                 </div>
                 <div className='picture-left'>
                     {images[startInterval]}
                 </div>
                 <div className='picture-center'>
-                    {images[currentInterval]}                       
+                    {images[currentInterval]}
                         <a href={'/photos'} className='enter-button'>
-                            Enter    
+                            Enter
                         </a>
                     {response.length > 0 && <a className='link' href={response[currentInterval].photographer_url}>{response[currentInterval].photographer}</a>}
                 </div>
@@ -191,7 +184,7 @@ const HomeImageApiMap = () => {
                     {images[endInterval]}
                 </div>
             </div>
-        )
+        );
     }
     return (
         <>
@@ -199,6 +192,6 @@ const HomeImageApiMap = () => {
                 {picturedBehind()}
             </ImageStyles>
         </>
-    )  
+    );
 }
-export default HomeImageApiMap
+export default HomeImageApiMap;

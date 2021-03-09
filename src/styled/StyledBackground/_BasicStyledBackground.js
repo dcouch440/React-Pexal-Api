@@ -5,4 +5,4 @@ export const StyledBackground = ({className, children}) => (
         <div className='background-container-Styled'></div>
         {children}
     </div>
-) 
+);

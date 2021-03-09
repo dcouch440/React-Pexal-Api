@@ -1,4 +1,4 @@
-import React from 'react'
+import React from 'react';
 
 export const BasicNavbar = ({className, children}) => (
     <div className={className}>
@@ -6,4 +6,4 @@ export const BasicNavbar = ({className, children}) => (
             {children}
         </div>
     </div>
-)
+);

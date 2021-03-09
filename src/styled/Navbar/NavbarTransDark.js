@@ -1,5 +1,5 @@
-import styled from 'styled-components'
-import {BasicNavbar} from './_BasicNavbar'
+import styled from 'styled-components';
+import {BasicNavbar} from './_BasicNavbar';
 
 const NavbarTransDark = styled(BasicNavbar)`
     box-sizing: border-box;
@@ -9,7 +9,7 @@ const NavbarTransDark = styled(BasicNavbar)`
     .brand {
         font-family: 'Parisienne',cursive;
         font-size: 22px;
-        color: #DAA520;       
+        color: #DAA520;
         padding: 0px 10px;
         -webkit-text-decoration: underline;
         text-decoration: underline;
@@ -49,5 +49,6 @@ const NavbarTransDark = styled(BasicNavbar)`
                 flex: auto;
             }
         }
-`
-export default NavbarTransDark
+`;
+
+export default NavbarTransDark;

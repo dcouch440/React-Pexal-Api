@@ -1,12 +1,12 @@
 import React, {useContext} from 'react';
-import {Context} from '../../Context'
-import Login from '../LoginFormStyled/StyledLogin/StyledLoginCompleteForGold/StyledLogin'
-import {StyledDropLink} from '../StyledLinks/StyledDropdown/StyledDropLink'
-import StyledDropTheme from '../StyledLinks/StyledDropdown/StyledDropTheme'
-import ToggleMenu from './ToggleMenu'
-import styled from 'styled-components'
+import {Context} from '../../Context';
+import Login from '../LoginFormStyled/StyledLogin/StyledLoginCompleteForGold/StyledLogin';
+import {StyledDropLink} from '../StyledLinks/StyledDropdown/StyledDropLink';
+import StyledDropTheme from '../StyledLinks/StyledDropdown/StyledDropTheme';
+import ToggleMenu from './ToggleMenu';
+import styled from 'styled-components';
+
 const Container = styled.div`
-    
     .toggle-button-container {
         position: relative;
         padding-top: 5px;
@@ -18,13 +18,12 @@ const Container = styled.div`
             display: none;
         }
     }
-
 `;
 
 const InnerNavMenu = ({backgroundColor})  => {
     const {setNavOpen} = useContext(Context)
-        return ( 
-            <>    
+        return (
+            <>
                 <Container>
                     <div className='hide'>
                         <div className="toggle-button-container">
@@ -36,9 +35,8 @@ const InnerNavMenu = ({backgroundColor})  => {
                             <StyledDropLink text={'One More!'}/>
                             <StyledDropTheme />
                     </div>
-                
                 </Container>
             </>
-        )
+        );
 }
 export default InnerNavMenu;

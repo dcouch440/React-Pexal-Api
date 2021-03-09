@@ -11,7 +11,6 @@ export const StyledGoldButton = styled(BasicButton)`
             flex-direction: row-reverse;
             padding-right: 5%;
         }
-        
         button {
         cursor: pointer;
         font-size: 1rem;
@@ -25,7 +24,6 @@ export const StyledGoldButton = styled(BasicButton)`
         padding: .375rem .75rem;
         margin: 5px 10px;
         position: relative;
-        
     }
         button:hover {
             box-shadow: 0.1px 0.1px 0.5px 1px #808080;
@@ -36,4 +34,4 @@ export const StyledGoldButton = styled(BasicButton)`
             outline: none;
             box-shadow: 0px 0px 12px black, .1px .1px 8px white;
         }
-`
+`;

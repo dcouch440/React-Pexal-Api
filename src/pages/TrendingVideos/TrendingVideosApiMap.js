@@ -1,6 +1,6 @@
-import React from 'react'
-import TrendingVideoStyles from './TrendingVideoStyles'
-import useEverScroll from '../../api/useEverScroll'
+import React from 'react';
+import TrendingVideoStyles from './TrendingVideoStyles';
+import useEverScroll from '../../api/useEverScroll';
 
 const TrendingVideos = () => {
     const [bottomBoundaryRef, lazyRef, vidData] = useEverScroll({dataType: 'TRENDING_VIDEO'})
@@ -15,7 +15,7 @@ const TrendingVideos = () => {
                 </div>
             )
         }
-    )
+    );
     return (
         <>
             <TrendingVideoStyles>
@@ -24,10 +24,10 @@ const TrendingVideos = () => {
                     <br />
                     <br />
                     <div style={{width: '0px', height: '0px'}} id='page-bottom-boundary' ref={bottomBoundaryRef}></div>
-                </div>      
+                </div>
             </TrendingVideoStyles>
         </>
-    ) 
+    );
 }
 
-export default TrendingVideos
+export default TrendingVideos;

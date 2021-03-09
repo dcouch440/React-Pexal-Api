@@ -1,5 +1,5 @@
-import {BasicWrapperText} from './_BasicInput'
-import styled from 'styled-components'
+import {BasicWrapperText} from './_BasicInput';
+import styled from 'styled-components';
 
 export const StyledTextInput = styled(BasicWrapperText)`
     font-size: 16px;
@@ -17,4 +17,4 @@ export const StyledTextInput = styled(BasicWrapperText)`
             outline: none;
             box-shadow: 0px 0px .2px gold, 0px 0px 2px 2px white;
         }
-`
+`;

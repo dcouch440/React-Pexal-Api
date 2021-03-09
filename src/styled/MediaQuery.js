@@ -1,5 +1,5 @@
-import styled from 'styled-components'
-import BasicWrapper from './_BasicWrapper'
+import styled from 'styled-components';
+import BasicWrapper from './_BasicWrapper';
 
 export const HideMeOnSmall = styled(BasicWrapper)`
     @media only screen and (max-width: 768px) {

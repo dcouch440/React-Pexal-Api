@@ -20,13 +20,11 @@ const Container = styled.div`
         top: 10%;
         right: 102%;
     }
-
 `;
 
 const DropDownMenu = ()  =>  {
-   
-    return(    
-        <>    
+    return(
+        <>
             <Container>
                 <div className='housing'>
                     <StyledLogin color={'rgb(218, 165, 32)'} />
@@ -34,10 +32,9 @@ const DropDownMenu = ()  =>  {
                     <StyledDropLink text={'Another option'}/>
                     <StyledDropLink text={'One More!'}/>
                     <StyledDropTheme />
-                         
                 </div>
             </Container>
         </>
-    )
+    );
 }
 export default DropDownMenu;

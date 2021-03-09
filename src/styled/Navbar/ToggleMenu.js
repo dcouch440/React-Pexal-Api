@@ -1,5 +1,5 @@
-import BasicButton from './_BasicButton'
-import styled from 'styled-components'
+import BasicButton from './_BasicButton';
+import styled from 'styled-components';
 
 const ToggleMenu = styled(BasicButton)`
     button {
@@ -36,6 +36,6 @@ const ToggleMenu = styled(BasicButton)`
                 transition: background-color .1s;
             }
     }
-    
-`
-export default ToggleMenu
+`;
+
+export default ToggleMenu;

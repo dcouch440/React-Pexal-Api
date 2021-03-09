@@ -1,4 +1,4 @@
-import styled from 'styled-components'
+import styled from 'styled-components';
 import BasicWrapper from '../../styled/_BasicWrapper';
 
 const TrendingVideoStyles = styled(BasicWrapper)`
@@ -26,7 +26,7 @@ const TrendingVideoStyles = styled(BasicWrapper)`
             object-fit: contain;
         }
     }
-    .trending-container {    
+    .trending-container {
         width: 90%;
         height: 90%;
         display: flex;
@@ -56,4 +56,5 @@ const TrendingVideoStyles = styled(BasicWrapper)`
             .video-container{width: 25%; height: 25%}
     }
 `;
-export default TrendingVideoStyles
+
+export default TrendingVideoStyles;

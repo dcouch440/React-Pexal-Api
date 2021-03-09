@@ -9,13 +9,13 @@ const useEverScroll = ({dataType}) => {
     const reducer = (state, action) => {
         switch (action.type) {
             case 'STACK_DATA':
-                return { ...state, stackData: state.stackData.concat(action.videoData) }
+                return { ...state, stackData: state.stackData.concat(action.videoData)}
             case 'FETCHING_DATA':
-                return { ...state, fetching: action.fetching }
+                return { ...state, fetching: action.fetching}
             default:
                 return state;
         }
-    }      
+    }
     const pageReducer = (state, action) => {
         switch (action.type) {
             case 'ADVANCE_PAGE':
@@ -24,7 +24,7 @@ const useEverScroll = ({dataType}) => {
                     return state;
         }
     }
-    
+
     const [ pager, pagerDispatch ] = useReducer(pageReducer, { page: 1 })
     const [dataStacked, dataDispatch] = useReducer(reducer, { stackData:[], fetching: true})
     useEffect(() => {
@@ -61,13 +61,13 @@ const useEverScroll = ({dataType}) => {
             }).observe(node)
         }, [pagerDispatch]
     )
-    
+
     useEffect(() => {
         if (bottomBoundaryRef.current) {
             scrollObserver(bottomBoundaryRef.current)
         }
     }, [scrollObserver, bottomBoundaryRef])
-    
+
     const lazyRef = useRef([])
     const observer = useCallback(node => {
         const intObs = new IntersectionObserver(entries => {
@@ -93,8 +93,8 @@ const useEverScroll = ({dataType}) => {
             lazyRef.current.forEach(data => observer(data))
         }
     }, [observer, lazyRef, dataStacked.StackData])
-    
+
     return [bottomBoundaryRef, lazyRef, dataStacked]
 }
 
-export default useEverScroll 
+export default useEverScroll

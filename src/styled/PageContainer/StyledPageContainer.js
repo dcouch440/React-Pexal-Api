@@ -6,7 +6,7 @@ const StyledPageContainer = styled(BasicPageContainer)`
         width: 100%;
         background-color: ${props => props.bgColor};
         color: ${props => props.color};
-        display: flex; 
-`
+        display: flex;
+`;
 
-export default StyledPageContainer
+export default StyledPageContainer;

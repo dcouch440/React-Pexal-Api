@@ -1,4 +1,4 @@
-import React from 'react'
+import React from 'react';
 
 export const BasicWrapperText = ({ className, labels, type, value, onChange, name, placeholder}) => (
     <div className={className}>
@@ -9,7 +9,7 @@ export const BasicWrapperText = ({ className, labels, type, value, onChange, nam
             </label>
         </div>
         <input
-            className={className} 
+            className={className}
             type={type}
             value={value}
             onChange={onChange}
@@ -17,7 +17,8 @@ export const BasicWrapperText = ({ className, labels, type, value, onChange, nam
             placeholder={placeholder}
         />
     </div>
-)
+);
+
 BasicWrapperText.defaultProps = {
     labels: 'none'
-}
+};

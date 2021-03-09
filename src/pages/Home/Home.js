@@ -1,9 +1,9 @@
-import React from 'react'
-import HomeImageApiMap from './HomeImageApiMap'
+import React from 'react';
+import HomeImageApiMap from './HomeImageApiMap';
 
 const Home = () =>(
     <>
-        <HomeImageApiMap /> 
+      <HomeImageApiMap />
     </>
-)
-export default Home
+);
+export default Home;

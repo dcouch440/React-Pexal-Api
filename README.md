@@ -91,7 +91,7 @@ code .
 
 ```javascript
 // EXAMPLE KEY ONLY
-const API_KEY = '3636922d5426672001gfismv64b3cb8d74154c398f838d1df9540346'
+const API_KEY = '1234IAMAKEY1234'
 ```
 
 * Now run the fallowing code in the terminal you started with or feel free to use the terminal of the code editor you are using. Just make sure you are within the project directory! 

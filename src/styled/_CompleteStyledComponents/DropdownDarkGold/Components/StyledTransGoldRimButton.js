@@ -1,8 +1,7 @@
-import BasicButton from './_BasicButton'
-import styled from 'styled-components'
+import BasicButton from './_BasicButton';
+import styled from 'styled-components';
 
 const StyledTransGoldRimButton = styled(BasicButton)`
-    
     button {
         cursor: pointer;
         border: .1px solid #daa520;
@@ -32,15 +31,13 @@ const StyledTransGoldRimButton = styled(BasicButton)`
                 background-color: #ffffff1a;
                 -webkit-transition: background-color .1s;
                 transition: background-color .1s;
-            
             }
     }
-    i { 
+    i {
         position: relative;
         line-height: 0;
         font-size: 25px;
         bottom: -3px;
     }
-    
-`
-export default StyledTransGoldRimButton
+`;
+export default StyledTransGoldRimButton;

@@ -1,6 +1,6 @@
-import pinkOrangeSplash from './pinkOrangeSplash.jpg'
-import styled from 'styled-components'
-import { StyledBackground } from '../_BasicStyledBackground'
+import pinkOrangeSplash from './pinkOrangeSplash.jpg';
+import styled from 'styled-components';
+import { StyledBackground } from '../_BasicStyledBackground';
 
 export const StyledPinkGradient = styled(StyledBackground)`
     width: 100%;
@@ -18,4 +18,4 @@ export const StyledPinkGradient = styled(StyledBackground)`
         filter: blur(30px);
         opacity: .80;
     }
-` 
+`;

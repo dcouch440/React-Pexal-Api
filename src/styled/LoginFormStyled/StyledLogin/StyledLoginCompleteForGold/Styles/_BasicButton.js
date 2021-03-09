@@ -12,5 +12,6 @@ const BasicButton = ({className, row, text, onClick, onSubmit}) => (
             </button>
         </div>
     </div>
-)
-export default BasicButton
+);
+
+export default BasicButton;

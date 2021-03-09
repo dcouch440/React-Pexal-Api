@@ -1,7 +1,7 @@
-import React, {useState} from 'react'
-import {StyledGoldButton} from './Styles/StyledGoldButton'
-import {StyledTextInput} from './Styles/StyledTextInput'
-import styled from 'styled-components'
+import React, {useState} from 'react';
+import {StyledGoldButton} from './Styles/StyledGoldButton';
+import {StyledTextInput} from './Styles/StyledTextInput';
+import styled from 'styled-components';
 
 const FormStyle = styled.div`
     text-align: center;
@@ -26,32 +26,28 @@ const FormStyle = styled.div`
             opacity: .5;
             text-align: center;
         }
-`
+`;
 
 
 function StyledLogin({color, backgroundColor}){
-    
     const [text, setText] = useState({
         email: '',
         password: '',
         checkbox: false
-    })
-    
+    });
     const handleSubmit = (event) => {
         event.preventDefault()
-    }
+    };
     const handleChange = (event) => {
         const {name, value, type, checked} = event.target
-        type === "checkbox" ? 
-            setText({[name]: checked})
-        :   setText({[name]: value}) 
-    }
+        type === "checkbox" ?
+            setText({[name]: checked}):
+            setText({[name]: value})
+    };
     const formStyle = {
         color: color,
         backgroundColor: backgroundColor,
-    }
-    
-    
+    };
     return (
         <FormStyle>
             <form style={formStyle} onSubmit={(event) => handleSubmit(event)}>
@@ -62,7 +58,7 @@ function StyledLogin({color, backgroundColor}){
                 <StyledGoldButton row='end' onClick={(event) => handleSubmit(event)} text={'Submit'} />
             </form>
         </FormStyle>
-    )
+    );
 }
 
-export default StyledLogin
+export default StyledLogin;

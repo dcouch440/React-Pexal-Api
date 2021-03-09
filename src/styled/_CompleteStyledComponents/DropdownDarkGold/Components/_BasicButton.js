@@ -1,4 +1,4 @@
-import React from 'react'
+import React from 'react';
 
 const BasicButton = ({className, row, text, onClick, onSubmit}) => (
     <div className={className}>
@@ -12,5 +12,6 @@ const BasicButton = ({className, row, text, onClick, onSubmit}) => (
             </button>
         </div>
     </div>
-)
-export default BasicButton
+);
+
+export default BasicButton;

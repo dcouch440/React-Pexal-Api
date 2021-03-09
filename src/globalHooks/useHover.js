@@ -1,9 +1,8 @@
-import {useEffect , useRef, useState} from 'react'
+import {useEffect , useRef, useState} from 'react';
 
 export default function useHover() {
-    const [isHovered, setIsHovered] = useState(false)
-    const ref = useRef(null)
-    
+    const [isHovered, setIsHovered] = useState(false);
+    const ref = useRef(null);
     const handleMouseOver = () => setIsHovered(true);
     const handleMouseOut = () => setIsHovered(false);
     const runIf = ref.current;
@@ -18,7 +17,7 @@ export default function useHover() {
                 node.removeEventListener('mouseout', handleMouseOut);
             }
         }
-    }, [runIf])
+    }, [runIf]);
 
-    return  [ref, isHovered] 
+    return  [ref, isHovered];
 }
