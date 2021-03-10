@@ -83,7 +83,7 @@ const ImageStyles = styled.div`
         box-shadow: 0px 5px 20px 0px #000000e8;
         color: goldenrod;
         font-size: 2vw;
-        bottom: 40%;
+        bottom: 20%;
         left: 40%;
         &:hover {
             background-color: #0000008a;
@@ -109,7 +109,7 @@ const ImageStyles = styled.div`
         font-size: 1vw;
         font-family: monospace;
         position: absolute;
-        bottom: 40%;
+        bottom: 10%;
         right: 40%;
         &:hover {
             background-color: #0000008a;
@@ -150,7 +150,6 @@ const HomeImageApiMap = () => {
                 }
             }
         }, 3000)
-
     // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [count]);
     const mappedData = response.length > 1 && response.map(

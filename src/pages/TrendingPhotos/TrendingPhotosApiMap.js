@@ -1,15 +1,17 @@
-import React, { useState} from 'react';
+import React, { useState, useContext} from 'react';
 import { TrendingPhotosStyles } from './TrendingPhotosStyles';
 import EverScroll from '../../api/EverScroll';
-
+import { Context } from '../../Context'
 const TrendingPhotosApiMap = () => {
     const [modal, setModal] = useState(0);
     const [toggleShow, setToggleShow] = useState('none');
+    const {setScrollBehavior} = useContext(Context);
     const [bottomBoundaryRef, lazyRef, imgData] = EverScroll({dataType: 'TRENDING_IMAGES'});
 
     const handleClick = (i = 0) => {
         setModal(i);
         setToggleShow(prevState => prevState === 'none' ? null : 'none');
+        setScrollBehavior(prev => !prev)
     }
 
     const imagesMapped =  imgData?.stackData.map(
@@ -20,9 +22,9 @@ const TrendingPhotosApiMap = () => {
                     <i class="fas fa-crown"></i>
                     Click
                 </button>
-                <button onClick={() => handleClick(i)} className='centered-container'>
+                <div onClick={() => handleClick(i)} className='centered-container'>
                     <img src={data.src.large} alt='Trending' />
-                </button>
+                </div>
             </div>
             )
         }

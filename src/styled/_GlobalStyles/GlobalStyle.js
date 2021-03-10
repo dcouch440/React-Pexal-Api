@@ -11,7 +11,7 @@ const GlobalStyle = createGlobalStyle`
         height: 100%;
     }
     body {
-        background-color: ${({lights}) => lights}
+        overflow: ${({stopScroll}) => stopScroll && 'hidden'};
     }
     #root {
         height: 100%;

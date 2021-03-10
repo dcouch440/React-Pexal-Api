@@ -98,7 +98,6 @@ export const TrendingPhotosStyles = styled(BasicWrapper)`
             @media only screen and (min-width: 670px) {
             &:hover {
                 transition-delay: 2s;
-                background-color: #a5850720;
                 border: none;
                 box-shadow: none;
                 .crown-button {
@@ -135,7 +134,7 @@ export const TrendingPhotosStyles = styled(BasicWrapper)`
                     margin-right: auto;
                     margin-left: auto;
                     object-fit: fill;
-                    transform: scale(1.04);
+                    transform: scale(1.02);
                     z-index: 1001;
                     transition: transform 2s;
                     width: auto;
