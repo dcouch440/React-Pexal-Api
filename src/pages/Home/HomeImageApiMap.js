@@ -16,6 +16,7 @@ const ImageStyles = styled.div`
     }
     .pictures-container {
         display: flex;
+        overflow: hidden;
         position: relative;
         justify-content: center;
         height: 100%;
@@ -83,8 +84,8 @@ const ImageStyles = styled.div`
         box-shadow: 0px 5px 20px 0px #000000e8;
         color: goldenrod;
         font-size: 2vw;
-        bottom: 20%;
-        left: 40%;
+        bottom: 30%;
+        left: 20%;
         &:hover {
             background-color: #0000008a;
             transition: 1s;
@@ -106,11 +107,11 @@ const ImageStyles = styled.div`
         color: goldenrod;
         text-shadow: 1px 0px 1px black;
         box-shadow: 0px 5px 20px 0px #000000e8;
-        font-size: 1vw;
+        font-size: 14px;
         font-family: monospace;
         position: absolute;
-        bottom: 10%;
-        right: 40%;
+        bottom: 30%;
+        right: 20%;
         &:hover {
             background-color: #0000008a;
             transition: 1s;

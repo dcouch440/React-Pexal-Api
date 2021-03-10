@@ -2,7 +2,7 @@
 
 #### Author: David Couch
 
-## Description
+## `Description`
 ***
 
 #### This app is an example of using Pexal Api to display images that are loaded from pexals Free `limited` Api.
@@ -21,7 +21,7 @@
 ### Note: This application requires an api key to access the content
 ##### `Get your pexal Api Key At https://www.pexels.com/api/`
 
-## Installation :
+## `Installation :`
 * Go to ( https://github.com/dcouch440/React-Pexal-Api.git ).
 
 *  Navigate to the code button on the Github website.\
@@ -108,13 +108,14 @@ npm start
 
 * congratulations you are ready to go!
 
-## Whats next?
+## `Whats next?`
 
+* Themes
 * Working login database.
-* framework moved into rails.
-* videos play on hover.
+* Framework moved into rails.
+* Videos play on hover.
 
-# Preview
+# `Preview`
 
 ***
 ![pexal screenshot](src/img/readme/pexalsHome1.PNG)
@@ -123,7 +124,10 @@ npm start
 ***
 ![pexal screenshot](src/img/readme/pexalsPictures3.PNG)
 ***
-
+![pexal screenshot](src/img/readme/pexalsHomeMobile.PNG)
+***
+![pexal screenshot](src/img/readme/pexalsPicturesMobile.PNG)
+***
 ### `npm start`
 
 Runs the app in the development mode.\
