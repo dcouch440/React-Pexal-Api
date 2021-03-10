@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import {BasicNavbar} from './_BasicNavbar';
+import {BasicNavbar} from '../_basics/_BasicNavbar';
 
 const NavbarTransDark = styled(BasicNavbar)`
     box-sizing: border-box;

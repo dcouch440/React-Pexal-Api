@@ -1,7 +1,7 @@
-import BasicWraper from '../../styled/_BasicWrapper'
+import BasicWrapper from '../../styled/_basics/_BasicWrapper'
 import styled from 'styled-components'
 
-export const TrendingPhotosStyles = styled(BasicWraper)`
+export const TrendingPhotosStyles = styled(BasicWrapper)`
     width: 100%;
     height: 100%;
     display: flex;
@@ -44,7 +44,6 @@ export const TrendingPhotosStyles = styled(BasicWraper)`
                     color: whitesmoke;
                 }
             }
-
         }
         img {
             box-shadow: 0px 0px 1px white;
@@ -69,7 +68,7 @@ export const TrendingPhotosStyles = styled(BasicWraper)`
                 }
         }
     }
-    .trending-container {    
+    .trending-container {
         width: 90%;
         height: 90%;
         display: flex;
@@ -112,7 +111,7 @@ export const TrendingPhotosStyles = styled(BasicWraper)`
                     height: 100%;
                     align-self: center;
                     font-family: 'Parisienne',cursive;
-                    outline: none;    
+                    outline: none;
                 }
                 .centered-container {
                     cursor: pointer;
@@ -146,7 +145,6 @@ export const TrendingPhotosStyles = styled(BasicWraper)`
                         }
                 }
             }
-            
         }
     }
     img {
@@ -158,4 +156,4 @@ export const TrendingPhotosStyles = styled(BasicWraper)`
     @media only screen and (max-width: 670px) {
         .image-container{width: 25%; height: 25%}
     }
-`
+`;

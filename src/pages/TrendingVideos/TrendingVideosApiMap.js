@@ -1,9 +1,9 @@
 import React from 'react';
 import TrendingVideoStyles from './TrendingVideoStyles';
-import useEverScroll from '../../api/useEverScroll';
+import EverScroll from '../../api/EverScroll';
 
 const TrendingVideos = () => {
-    const [bottomBoundaryRef, lazyRef, vidData] = useEverScroll({dataType: 'TRENDING_VIDEO'});
+    const [bottomBoundaryRef, lazyRef, vidData] = EverScroll({dataType: 'TRENDING_VIDEO'});
 
     const displayMedia = vidData.stackData.length > 0 && vidData.stackData.map(
         (data, i) => {

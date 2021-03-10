@@ -126,16 +126,13 @@ const HomeImageApiMap = () => {
 
     useEffect(() => {
         if (response.length < 1) {
-            const fetchData = new Promise((resolve, reject) => {
+            new Promise((resolve) => {
                 const responseData = createClient(API_KEY).photos.curated();
                 resolve(responseData);
-                reject(console.log('No response HomeImageApiMap.js'));
             })
-            fetchData.then((data) =>  {
+            .then((data) => {
                 setResponse(data.photos)
-                console.log(data.photos)
-                console.log(response)
-            });
+            })
         }
     // eslint-disable-next-line react-hooks/exhaustive-deps
     }, []);
@@ -153,6 +150,8 @@ const HomeImageApiMap = () => {
                 }
             }
         }, 3000)
+
+    // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [count]);
     const mappedData = response.length > 1 && response.map(
         data => (

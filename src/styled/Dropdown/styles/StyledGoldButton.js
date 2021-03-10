@@ -1,4 +1,4 @@
-import BasicButton from './_BasicButton'
+import BasicButton from '../../_basics/_BasicButton'
 import styled from 'styled-components'
 
 export const StyledGoldButton = styled(BasicButton)`
@@ -7,7 +7,6 @@ export const StyledGoldButton = styled(BasicButton)`
         width: 100%;
         .end {
             display: flex;
-            height: 100%;
             margin: 10px;
             flex-direction: row-reverse;
             padding-right: 5%;
@@ -29,6 +28,7 @@ export const StyledGoldButton = styled(BasicButton)`
         button:hover {
             box-shadow: 0.1px 0.1px 0.5px 1px #808080;
             transition: .2s;
+            transform: scale(1.02);
         }
         button:focus {
             outline: none;

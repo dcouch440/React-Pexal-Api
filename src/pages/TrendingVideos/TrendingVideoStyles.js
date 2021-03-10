@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import BasicWrapper from '../../styled/_BasicWrapper';
+import BasicWrapper from '../../styled/_basics/_BasicWrapper';
 
 const TrendingVideoStyles = styled(BasicWrapper)`
     width: 100%;

@@ -2,7 +2,7 @@ import { useContext } from 'react';
 import { createClient } from 'pexels';
 import { Context } from '../Context';
 
-export const useApi = () => {
+export const Api = () => {
     const {API_KEY} = useContext(Context);
 
     const trendingPhoto = async ({perPage = null, currentPage = null}) => {

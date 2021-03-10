@@ -1,4 +1,4 @@
-import {BasicWrapperText} from './_BasicInput';
+import { BasicWrapperText } from '../../_basics/_BasicInput';
 import styled from 'styled-components';
 
 export const StyledTextInput = styled(BasicWrapperText)`
@@ -8,8 +8,11 @@ export const StyledTextInput = styled(BasicWrapperText)`
     .label-container {
         text-align: start;
         padding-left: 3%;
-        font-size: 30px;
+        font-size: 24px;
     }
+        input:hover {
+            box-shadow: 0px 0px 1px white;
+        }
         :focus {
             outline: none;
             box-shadow: 0px 0px .2px gold, 0px 0px 2px 2px white;

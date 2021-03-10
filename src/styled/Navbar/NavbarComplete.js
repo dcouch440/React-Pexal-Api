@@ -1,7 +1,7 @@
 import React, {useContext} from 'react'
-import StyledNavbarLink from './Links/StyledNavbarLink'
-import NavbarTransDark from './NavbarTransDark'
-import StyledDropGold from '../_CompleteStyledComponents/DropdownDarkGold/StyledDropGold';
+import StyledNavbarLink from './_basics/StyledNavbarLink'
+import NavbarTransDark from './styles/NavbarTransDark'
+import StyledDropGold from '../Dropdown/StyledDropGold';
 import InnerNavMenu from './InnerNavMenu';
 import {Context} from '../../Context';
 

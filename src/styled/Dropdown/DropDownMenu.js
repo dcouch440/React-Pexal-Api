@@ -1,6 +1,6 @@
 import React from 'react';
-import StyledLogin from './StyledLoginCompleteForGold/StyledLogin'
-import StyledDropLink from './StyledDropLink'
+import StyledLogin from './styles/StyledLogin'
+import {StyledDropLink} from './StyledDropLink'
 import StyledDropTheme from './StyledDropTheme'
 import styled from 'styled-components'
 

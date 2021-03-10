@@ -1,5 +1,4 @@
 {
   "liveServer.settings.port": 5501,
-  "editor.tabSize": 2,
-  "files.autoSave": "afterDelay"
+  "editor.tabSize": 2
 }

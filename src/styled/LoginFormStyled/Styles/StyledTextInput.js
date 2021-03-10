@@ -1,4 +1,4 @@
-import {BasicWrapperText} from './_BasicInput';
+import {BasicWrapperText} from '../../_basics/_BasicInput';
 import styled from 'styled-components';
 
 export const StyledTextInput = styled(BasicWrapperText)`

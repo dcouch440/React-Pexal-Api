@@ -1,6 +1,6 @@
 import React, {useState} from 'react';
-import DropDownMenu from './Components/DropDownMenu';
-import StyledTransGoldRimButton from './Components/StyledTransGoldRimButton';
+import DropDownMenu from './DropDownMenu';
+import StyledTransGoldRimButton from './styles/StyledTransGoldRimButton';
 import styled from 'styled-components';
 
 const DropdownStyles = styled.div`
@@ -12,17 +12,17 @@ const DropdownStyles = styled.div`
       display: none;
     }
 `;
-function StyledDropGold() {
+const StyledDropGold = () => {
     const [display, setDisplay] = useState('hide-me');
 
   const icon = (thing = true) => (
       thing === true ?
       <div>
-        <i class="fas fa-angle-left" /> Menu
+        <i className="fas fa-angle-left" /> Menu
       </div>
       :
       <div>
-        <i class="fas fa-angle-right" /> Menu
+        <i className="fas fa-angle-right" /> Menu
       </div>
 
   );
@@ -34,9 +34,9 @@ function StyledDropGold() {
       <div className="App">
           <header className="App-header">
               <DropdownStyles>
-                  <div class='Component-Container'>
-                      <StyledTransGoldRimButton text={icon()} onClick={() => handleClick()}/>
-                      <div class={ `${display} dropdown-side`}>
+                  <div className='Component-Container'>
+                      <StyledTransGoldRimButton text={icon()} onClick={() => handleClick()} />
+                      <div className={ `${display} dropdown-side` }>
                           <DropDownMenu />
                       </div>
                   </div>

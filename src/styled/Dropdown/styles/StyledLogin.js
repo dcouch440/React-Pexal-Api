@@ -1,6 +1,6 @@
 import React, {useState} from 'react';
-import {StyledGoldButton} from './Styles/StyledGoldButton';
-import {StyledTextInput} from './Styles/StyledTextInput';
+import {StyledGoldButton} from './StyledGoldButton';
+import {StyledTextInput} from './StyledTextInput';
 import styled from 'styled-components';
 
 const FormStyle = styled.div`

@@ -1,9 +1,9 @@
 import React, {useContext} from 'react';
-import {Context} from '../../Context';
-import Login from '../LoginFormStyled/StyledLogin/StyledLoginCompleteForGold/StyledLogin';
-import {StyledDropLink} from '../StyledLinks/StyledDropdown/StyledDropLink';
-import StyledDropTheme from '../StyledLinks/StyledDropdown/StyledDropTheme';
-import ToggleMenu from './ToggleMenu';
+import { Context } from '../../Context';
+import { StyledDropLink } from '../Dropdown/StyledDropLink';
+import Login from '../LoginFormStyled/StyledLogin';
+import StyledDropTheme from '../Dropdown/StyledDropTheme';
+import ToggleMenu from './styles/ToggleMenu';
 import styled from 'styled-components';
 
 const Container = styled.div`

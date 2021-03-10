@@ -1,15 +1,15 @@
 import { useEffect, useReducer, useCallback, useRef, useContext } from 'react';
-import { useApi } from './useApi';
+import { Api } from './Api';
 import { Context } from '../Context';
 
-const useEverScroll = ({dataType}) => {
+const EverScroll = ({dataType}) => {
     const {searchQuery} = useContext(Context);
-    const {trendingPhoto, trendingVideo} = useApi();
+    const {trendingPhoto, trendingVideo} = Api();
 
     const reducer = (state, action) => {
         switch (action.type) {
             case 'STACK_DATA':
-                return { ...state, stackData: state.stackData.concat(action.videoData)}
+                return { ...state, stackData: state.stackData.concat(action.media)}
             case 'FETCHING_DATA':
                 return { ...state, fetching: action.fetching}
             default:
@@ -19,27 +19,27 @@ const useEverScroll = ({dataType}) => {
     const pageReducer = (state, action) => {
         switch (action.type) {
             case 'ADVANCE_PAGE':
-                return { ...state, page: state.page + 1 }
-                default:
-                    return state;
+                return {page: state.page + 1 }
+            default:
+                return state;
         }
     }
 
     const [ pager, pagerDispatch ] = useReducer(pageReducer, { page: 1 })
     const [dataStacked, dataDispatch] = useReducer(reducer, { stackData:[], fetching: true})
+
     useEffect(() => {
-        dataDispatch({type: 'FETCHING_DATA', fetching: true})
-        const fetchData = new Promise((resolve) => {
+        dataDispatch({type: 'FETCHING_DATA', fetching: true});
+        new Promise((resolve) => {
             if (dataType === 'TRENDING_VIDEO') {
                 trendingVideo({perPage: 16, currentPage: pager.page}).then(data => resolve(data))
             }
             if (dataType === 'TRENDING_IMAGES') {
                 trendingPhoto({perPage: 16, currentPage: pager.page}).then(data => resolve(data))
             }
-        });
-        fetchData.then((data) =>  {
-            const videoData = data
-            dataDispatch({type: 'STACK_DATA', videoData})
+        })
+        .then((data) =>  {
+            dataDispatch({type: 'STACK_DATA', media: data})
             dataDispatch({type: 'FETCHING_DATA', fetching: false})
         })
         .catch(e => {
@@ -64,7 +64,7 @@ const useEverScroll = ({dataType}) => {
 
     useEffect(() => {
         if (bottomBoundaryRef.current) {
-            scrollObserver(bottomBoundaryRef.current)
+            scrollObserver(bottomBoundaryRef.current);
         }
     }, [scrollObserver, bottomBoundaryRef]);
 
@@ -89,12 +89,10 @@ const useEverScroll = ({dataType}) => {
     }, []);
 
     useEffect(() => {
-        if (lazyRef.current) {
-            lazyRef.current.forEach(data => observer(data))
-        }
+        if (lazyRef.current) lazyRef.current.forEach(data => observer(data))
     }, [observer, lazyRef, dataStacked.StackData]);
 
     return [bottomBoundaryRef, lazyRef, dataStacked];
 }
 
-export default useEverScroll;
+export default EverScroll;

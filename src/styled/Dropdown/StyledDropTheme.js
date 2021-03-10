@@ -1,6 +1,6 @@
 import React from 'react';
-import {useTheme} from '../../../../globalHooks/useTheme';
-import StyledDropLink from './StyledDropLink';
+import {useTheme} from '../../globalHooks/useTheme';
+import {StyledDropLink} from './StyledDropLink';
 import styled from 'styled-components';
 
 
@@ -28,7 +28,7 @@ export const StyledDropTheme = () => {
             text={text()}
             onClick={() => handleTheme()}
         />
-    )
+    );
 }
 
 export default StyledDropTheme;

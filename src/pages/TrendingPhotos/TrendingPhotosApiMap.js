@@ -1,18 +1,18 @@
-import React, { useState } from 'react';
+import React, { useState} from 'react';
 import { TrendingPhotosStyles } from './TrendingPhotosStyles';
-import useEverScroll from '../../api/useEverScroll';
+import EverScroll from '../../api/EverScroll';
 
 const TrendingPhotosApiMap = () => {
     const [modal, setModal] = useState(0);
     const [toggleShow, setToggleShow] = useState('none');
-    const [bottomBoundaryRef, lazyRef, imgData] = useEverScroll({dataType: 'TRENDING_IMAGES'});
+    const [bottomBoundaryRef, lazyRef, imgData] = EverScroll({dataType: 'TRENDING_IMAGES'});
 
     const handleClick = (i = 0) => {
         setModal(i);
         setToggleShow(prevState => prevState === 'none' ? null : 'none');
     }
 
-    const imagesMapped =  (imgData.stackData.length > 0) && imgData.stackData.map(
+    const imagesMapped =  imgData?.stackData.map(
         (data, i) => {
             return(
             <div key={i} ref={el => lazyRef.current[i] = el} className={'image-container'}>
@@ -26,7 +26,7 @@ const TrendingPhotosApiMap = () => {
             </div>
             )
         }
-    );
+    )
     return (
         <>
             <TrendingPhotosStyles>
@@ -36,7 +36,7 @@ const TrendingPhotosApiMap = () => {
                     </button>
                     {imgData.stackData.length > 0 && (
                         <>
-                            <img src={imgData.stackData[modal].src.original} alt='modal'/>
+                            <img src={imgData?.stackData[modal].src.original} alt='modal'/>
                             <div className='modal-links'>
                                 <a target="_blank" rel="noopener noreferrer" href={imgData.stackData[modal].src.original}>Original</a>
                                 <a target="_blank" rel="noopener noreferrer" href={imgData.stackData[modal].src.tiny}>Tiny</a>

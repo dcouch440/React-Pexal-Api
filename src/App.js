@@ -1,21 +1,15 @@
-import React, {useContext} from 'react';
-import './App.css';
+import React from 'react';
 import NavbarComplete from './styled/Navbar/NavbarComplete';
 import PageRouter from './pages/PageRouter';
 import GlobalStyle from './styled/GlobalStyle';
-import {Context} from './Context';
 
-function App() {
-  const {theme} = useContext(Context);
-  const lights = theme === 'light' ? 'rgba(0, 0, 0, 0.400)' : 'rbg(0,0,0)';
 
-  return (
+const App = () => (
     <>
-        <GlobalStyle lights={lights}/>
+        <GlobalStyle />
         <NavbarComplete />
         <PageRouter />
     </>
-  );
-}
+);
 
 export default App;

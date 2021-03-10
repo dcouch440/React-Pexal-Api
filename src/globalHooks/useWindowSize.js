@@ -6,33 +6,33 @@ function useWindowSize(){
     const X_BREAK_LRG = 992
     const Y_BREAK_SHORT = 600
 
-    // width measured by window width - X AXES 
+    // width measured by window width - X AXES
     const [width, setWidth] = useState(window.innerWidth)
     const [height, setHeight] = useState(window.innerHeight)
 
-    // screen specific brackets 
+    // screen specific brackets
     // use for specific brackets only
     // will return false on leaving bracket
     const [screenIsXS, setScreenIsXS] = useState(false)
     const [screenIsSmall, setScreenIsSmall] = useState(false)
     const [screenIsMedium, setScreenIsMedium] = useState(false)
     const [screenIsLarge, setScreenIsLarge] = useState(false)
-    
+
     // string description of height to use for className or like situations
     const [windowWidth, setWindowWidth] = useState('')
-    
+
     // height measured by window height - Y AXES
     const [screenIsShort, setScrenIsShort] = useState(false)
     const [screenIsTall, setScreenIsTall] = useState(false)
-    
+
     // string description of height to use for className or like situations
     const [windowHeight, setWindowHeight] = useState('')
-    
+
     // preset conditions for teranary
     // smallScreen = small only
     // mediumScreen = small + medium
     // largeScreen = small + medium + large
-    /*///----------------------------------------------------  
+    /*///----------------------------------------------------
     |   using medium will return false if screen is large   |
     |   using small will return false if screen is medium   |
     |   use with conditions to apply classNames or css      |
@@ -53,9 +53,9 @@ function useWindowSize(){
     useEffect(() => {
         if (width <= X_BREAK_SML) {
             setScreenIsXS(true)
-            
+
             setWindowWidth('xsml')
-            
+
             // non strict
             setSmallScreen(true)
             setMediumScreen(false)
@@ -98,7 +98,6 @@ function useWindowSize(){
         }
     }, [width])
 
-    
     useEffect(() => {
         if (height < Y_BREAK_SHORT) {
             setScrenIsShort(true)
@@ -113,8 +112,8 @@ function useWindowSize(){
     }, [height])
 
     return {
-        width, 
-        height, 
+        width,
+        height,
         screenIsXS,
         screenIsSmall,
         screenIsMedium,
