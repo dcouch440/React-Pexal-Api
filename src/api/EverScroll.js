@@ -1,9 +1,7 @@
-import { useEffect, useReducer, useCallback, useRef, useContext } from 'react';
+import { useEffect, useReducer, useCallback, useRef } from 'react';
 import { Api } from './Api';
-import { Context } from '../Context';
 
 const EverScroll = ({dataType}) => {
-    const {searchQuery} = useContext(Context);
     const {trendingPhoto, trendingVideo} = Api();
 
     const reducer = (state, action) => {
@@ -27,15 +25,16 @@ const EverScroll = ({dataType}) => {
 
     const [ pager, pagerDispatch ] = useReducer(pageReducer, { page: 1 })
     const [dataStacked, dataDispatch] = useReducer(reducer, { stackData:[], fetching: true})
-
     useEffect(() => {
         dataDispatch({type: 'FETCHING_DATA', fetching: true});
         new Promise((resolve) => {
             if (dataType === 'TRENDING_VIDEO') {
-                trendingVideo({perPage: 16, currentPage: pager.page}).then(data => resolve(data))
+                trendingVideo({perPage: 16, currentPage: pager.page})
+                    .then(data => resolve(data))
             }
             if (dataType === 'TRENDING_IMAGES') {
-                trendingPhoto({perPage: 16, currentPage: pager.page}).then(data => resolve(data))
+                trendingPhoto({perPage: 16, currentPage: pager.page})
+                    .then(data => resolve(data))
             }
         })
         .then((data) =>  {
@@ -47,7 +46,7 @@ const EverScroll = ({dataType}) => {
             return e
         })
     // eslint-disable-next-line react-hooks/exhaustive-deps
-    }, [dataDispatch, pager.page, searchQuery]);
+    }, [dataDispatch, pager.page]);
 
     let bottomBoundaryRef = useRef(null);
     const scrollObserver = useCallback(
