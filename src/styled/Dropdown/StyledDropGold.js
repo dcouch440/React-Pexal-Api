@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-import DropDownMenu from './DropDownMenu';
+import DropDownMenu from './StyledDropDownMenu';
 import StyledTransGoldRimButton from './styles/StyledTransGoldRimButton';
 import styled from 'styled-components';
 
@@ -17,13 +17,13 @@ const StyledDropGold = () => {
 
   const icon = (thing = true) => (
       thing === true ?
-      <div>
-        <i className="fas fa-angle-left" /> Menu
-      </div>
-      :
-      <div>
-        <i className="fas fa-angle-right" /> Menu
-      </div>
+        <div>
+          <i className="fas fa-angle-left" /> Menu
+        </div>
+        :
+        <div>
+          <i className="fas fa-angle-right" /> Menu
+        </div>
 
   );
   const handleClick = () => {

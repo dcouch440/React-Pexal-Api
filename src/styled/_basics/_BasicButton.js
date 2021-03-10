@@ -7,7 +7,7 @@ const BasicButton = ({className, row, text, onClick, onSubmit}) => (
                 onClick={onClick}
                 onSubmit={onSubmit}
                 type="submit"
-                >
+            >
                 {text}
             </button>
         </div>

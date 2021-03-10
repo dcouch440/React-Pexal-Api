@@ -1,4 +1,4 @@
-import BasicButton from '../../_basics/_BasicButton'
+import BasicButton from '../_basics/_BasicButton'
 import styled from 'styled-components'
 
 export const StyledGoldButton = styled(BasicButton)`

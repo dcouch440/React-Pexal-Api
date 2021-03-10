@@ -2,6 +2,7 @@ import React, { useState, useContext} from 'react';
 import { TrendingPhotosStyles } from './TrendingPhotosStyles';
 import EverScroll from '../../api/EverScroll';
 import { Context } from '../../Context'
+
 const TrendingPhotosApiMap = () => {
     const [modal, setModal] = useState(0);
     const [toggleShow, setToggleShow] = useState('none');

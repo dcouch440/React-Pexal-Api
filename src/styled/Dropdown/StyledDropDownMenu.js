@@ -14,7 +14,11 @@ const Container = styled.div`
         height: 500px;
         padding: 2px;
         border-radius: 12px;
-        box-shadow: inset 1px 1px 1px 0px #daa520, inset 0px -1px 1px 0px #daa520, inset 0px -1px 1px 0px #daa520, inset -1px 0px 1px 0px #daa520;
+        box-shadow:
+            inset 1px 1px 1px 0px #daa520,
+            inset 0px -1px 1px 0px #daa520,
+            inset 0px -1px 1px 0px #daa520,
+            inset -1px 0px 1px 0px #daa520;
         overflow: hidden;
         position: absolute;
         top: 10%;

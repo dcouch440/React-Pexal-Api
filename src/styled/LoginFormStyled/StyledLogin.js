@@ -8,9 +8,10 @@ const FormStyle = styled.div`
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+    font-family:
+        -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+        'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+        sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     width: 100%;
@@ -52,7 +53,7 @@ function StyledLogin({color, backgroundColor}){
         <FormStyle>
             <form style={formStyle} onSubmit={(event) => handleSubmit(event)}>
                 <br />
-                <StyledTextInput type={'text'} labels='email' value={text.email} onChange={handleChange} placeholder={'Email adress' }name={'email'}/>
+                <StyledTextInput type={'text'} labels='email' value={text.email} onChange={handleChange} placeholder={'Email address' }name={'email'}/>
                 <p>We will never share your password with anyone.</p>
                 <StyledTextInput type={'password'} labels='password' value={text.password} onChange={handleChange} placeholder={'Password'} name={'password'} />
                 <StyledGoldButton row='end' onClick={(event) => handleSubmit(event)} text={'Submit'} />
