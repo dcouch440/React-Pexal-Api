@@ -1,7 +1,7 @@
-import React, {useState, useEffect, useContext} from 'react'
-import styled from 'styled-components'
-import { Context } from '../../Context'
-import { createClient } from 'pexels'
+import React, {useState, useEffect, useContext} from 'react';
+import styled from 'styled-components';
+import { Context } from '../../Context';
+import { createClient } from 'pexels';
 
 const ImageStyles = styled.div`
     width: 100%;
@@ -118,8 +118,7 @@ const ImageStyles = styled.div`
         }
 
     }
-
-`
+`;
 const HomeImageApiMap = () => {
     const [response, setResponse] = useState([])
     const [count, setCount] = useState(0)

@@ -1,8 +1,8 @@
 import React from 'react';
-import StyledLogin from './styles/StyledLogin'
-import { StyledDropLink } from './StyledDropLink'
-import StyledDropTheme from './StyledDropTheme'
-import styled from 'styled-components'
+import StyledLogin from './styles/StyledLogin';
+import { StyledDropLink } from './styles/StyledDropLink';
+import StyledDropTheme from './StyledDropTheme';
+import styled from 'styled-components';
 
 const Container = styled.div`
     .housing {
@@ -41,4 +41,5 @@ const DropDownMenu = ()  =>  {
         </>
     );
 }
+
 export default DropDownMenu;

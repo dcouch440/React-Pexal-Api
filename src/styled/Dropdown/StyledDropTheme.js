@@ -1,6 +1,6 @@
 import React from 'react';
 import {useTheme} from '../../globalHooks/useTheme';
-import {StyledDropLink} from './StyledDropLink';
+import {StyledDropLink} from './styles/StyledDropLink';
 import styled from 'styled-components';
 
 

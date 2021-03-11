@@ -1,4 +1,4 @@
-import BasicDropLink from '../_basics/_BasicDropLink';
+import BasicDropLink from '../../_basics/_BasicDropLink';
 import styled from 'styled-components';
 
 export const StyledDropLink = styled(BasicDropLink)`
