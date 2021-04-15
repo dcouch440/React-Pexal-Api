@@ -1,4 +1,4 @@
-import React, {useContext} from 'react';
+import React, { useContext } from 'react';
 import { Context } from '../../Context';
 import { StyledDropLink } from '../Dropdown/styles/StyledDropLink';
 import Login from '../LoginFormStyled/StyledLogin';
@@ -29,11 +29,11 @@ const InnerNavMenu = ({backgroundColor})  => {
                         <div className="toggle-button-container">
                             <ToggleMenu text={'☰'} onClick={() =>  setNavOpen(prevState => !prevState)}/>
                         </div>
-                            <Login color={'rgb(218, 165, 32)'} backgroundColor={backgroundColor}/>
-                            <StyledDropLink text={'An option'}/>
-                            <StyledDropLink text={'Another option'}/>
-                            <StyledDropLink text={'One More!'}/>
-                            <StyledDropTheme />
+                        <Login color={'rgb(218, 165, 32)'} backgroundColor={backgroundColor}/>
+                        <StyledDropLink text={'An option'}/>
+                        <StyledDropLink text={'Another option'}/>
+                        <StyledDropLink text={'One More!'}/>
+                        <StyledDropTheme />
                     </div>
                 </Container>
             </>

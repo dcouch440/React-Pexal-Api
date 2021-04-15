@@ -25,7 +25,7 @@
 * Go to ( https://github.com/dcouch440/React-Pexal-Api.git ).
 
 *  Navigate to the code button on the Github website.\
-![Code buton](src/img/readme/code.PNG)
+![Code button](src/img/readme/code.PNG)
 
 * Click on the code button to open the menu.\
 ![Github Repo Example](src/img/readme/Pexal-instruction.PNG)

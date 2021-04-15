@@ -2,6 +2,7 @@ import BasicButton from '../../_basics/_BasicButton';
 import styled from 'styled-components';
 
 const StyledTransGoldRimButton = styled(BasicButton)`
+
     button {
         cursor: pointer;
         border: .1px solid #daa520;

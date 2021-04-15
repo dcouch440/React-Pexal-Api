@@ -25,6 +25,7 @@ const EverScroll = ({dataType}) => {
 
     const [ pager, pagerDispatch ] = useReducer(pageReducer, { page: 1 })
     const [dataStacked, dataDispatch] = useReducer(reducer, { stackData:[], fetching: true})
+
     useEffect(() => {
         dataDispatch({type: 'FETCHING_DATA', fetching: true});
         new Promise((resolve) => {
