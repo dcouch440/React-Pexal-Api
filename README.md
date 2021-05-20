@@ -113,9 +113,6 @@ npm start
 
 ## `Whats next?`
 
-* Themes
-* Working login database.
-* Framework moved into rails.
 * Videos play on hover.
 
 # `Preview`
