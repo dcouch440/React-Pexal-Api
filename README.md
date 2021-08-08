@@ -1,7 +1,7 @@
 # React Pexal Api App Using Css Flex Box
 
-#### Author: David Couch
-
+## Author: David Couch
+### Created: Aug 19, 2020
 ## `Description`
 ***
 
