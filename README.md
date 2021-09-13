@@ -1,7 +1,7 @@
 # React Pexal Api App Using Css Flex Box
 
-#### Author: David Couch
-
+## Author: David Couch
+### Created: Aug 19, 2020
 ## `Description`
 ***
 
@@ -18,6 +18,9 @@
 #### This Software uses npm pexal api software. After the data is received it is sorted in an an object with functions made to emulate the efficacy of redux dispatch methods. After the data is sorted images are rendered on the page and an intersection observer is used to check if more data is needed. More request will be made to suite the need of the page. This project displays the use of useRef, useEffect, useReducer, useCallback, useRef, useContext, extensive looping and working with renders as object data changes.
 
 ***
+
+## See this app now! (https://hidden-headland-54701.herokuapp.com/)
+
 ### Note: This application requires an api key to access the content
 ##### `Get your pexal Api Key At https://www.pexels.com/api/`
 
@@ -110,9 +113,6 @@ npm start
 
 ## `Whats next?`
 
-* Themes
-* Working login database.
-* Framework moved into rails.
 * Videos play on hover.
 
 # `Preview`
