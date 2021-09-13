@@ -1,5 +1,5 @@
-import BasicWrapper from '../../styled/_basics/_BasicWrapper'
-import styled from 'styled-components'
+import BasicWrapper from '../../styled/_basics/_BasicWrapper';
+import styled from 'styled-components';
 
 export const TrendingPhotosStyles = styled(BasicWrapper)`
     width: 100%;

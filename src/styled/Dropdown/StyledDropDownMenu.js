@@ -1,8 +1,8 @@
 import React from 'react';
-import StyledLogin from './styles/StyledLogin';
-import { StyledDropLink } from './styles/StyledDropLink';
-import StyledDropTheme from './StyledDropTheme';
 import styled from 'styled-components';
+import StyledDropTheme from './StyledDropTheme';
+import { StyledDropLink } from './styles/StyledDropLink';
+import StyledLogin from './styles/StyledLogin';
 
 const Container = styled.div`
     .housing {
@@ -27,19 +27,28 @@ const Container = styled.div`
 `;
 
 const DropDownMenu = ()  =>  {
-    return(
+    return (
         <>
             <Container>
                 <div className='housing'>
                     <StyledLogin color={'rgb(218, 165, 32)'} />
-                    <StyledDropLink text={'An option'}/>
-                    <StyledDropLink text={'Another option'}/>
-                    <StyledDropLink text={'One More!'}/>
+                    <StyledDropLink
+                        text={'An option'}
+                        to='/'
+                    />
+                    <StyledDropLink
+                        text={'Another option'}
+                        to='/'
+                    />
+                    <StyledDropLink
+                        text={'One More!'}
+                        to='/'
+                    />
                     <StyledDropTheme />
                 </div>
             </Container>
         </>
     );
-}
+};
 
 export default DropDownMenu;

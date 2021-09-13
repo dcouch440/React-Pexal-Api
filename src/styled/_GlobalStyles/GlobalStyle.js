@@ -1,4 +1,4 @@
-import {createGlobalStyle} from  'styled-components';
+import { createGlobalStyle } from  'styled-components';
 
 const GlobalStyle = createGlobalStyle`
     * {
@@ -11,7 +11,7 @@ const GlobalStyle = createGlobalStyle`
         height: 100%;
     }
     body {
-        overflow: ${({stopScroll}) => stopScroll && 'hidden'};
+        overflow: ${({ stopScroll }) => stopScroll && 'hidden'};
     }
     #root {
         height: 100%;

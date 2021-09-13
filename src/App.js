@@ -1,14 +1,14 @@
-import React, {useContext} from 'react';
-import NavbarComplete from './styled/Navbar/NavbarComplete';
+import React, { useContext } from 'react';
+import { Context } from './Context';
 import PageRouter from './pages/PageRouter';
+import NavbarComplete from './styled/Navbar/NavbarComplete';
 import GlobalStyle from './styled/_GlobalStyles/GlobalStyle';
-import {Context} from './Context'
 
 const App = () => {
-    const {scrollBehavior} = useContext(Context)
+    const { scrollBehavior } = useContext(Context);
     return (
         <>
-            <GlobalStyle stopScroll={scrollBehavior}/>
+            <GlobalStyle stopScroll={scrollBehavior} />
             <NavbarComplete />
             <PageRouter />
         </>

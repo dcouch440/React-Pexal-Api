@@ -3,7 +3,7 @@ import HomeImageApiMap from './HomeImageApiMap';
 
 const Home = () =>(
     <>
-      <HomeImageApiMap />
+        <HomeImageApiMap />
     </>
 );
 export default Home;

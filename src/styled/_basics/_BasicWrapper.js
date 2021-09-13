@@ -1,6 +1,6 @@
 import React from 'react';
 
-const BasicWrapper = ({className, children}) => (
+const BasicWrapper = ({ className, children }) => (
     <div className={className}>
         {children}
     </div>

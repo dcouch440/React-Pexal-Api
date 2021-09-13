@@ -1,6 +1,6 @@
 import React from 'react';
 
-const BasicPageContainer = ({className, children}) => (
+const BasicPageContainer = ({ className, children }) => (
     <div className={className}>
         {children}
     </div>

@@ -1,7 +1,11 @@
-import React, {useState, useEffect, useContext} from 'react';
+import { createClient } from 'pexels';
+import React, {
+    useContext,
+    useEffect,
+    useState
+} from 'react';
 import styled from 'styled-components';
 import { Context } from '../../Context';
-import { createClient } from 'pexels';
 
 const ImageStyles = styled.div`
     width: 100%;
@@ -119,43 +123,43 @@ const ImageStyles = styled.div`
 
     }
 `;
+
 const HomeImageApiMap = () => {
-    const [response, setResponse] = useState([])
-    const [count, setCount] = useState(0)
-    const {API_KEY} = useContext(Context)
+    const [response, setResponse] = useState([]);
+    const [count, setCount] = useState(0);
+    const { API_KEY } = useContext(Context);
 
     useEffect(() => {
         if (response.length < 1) {
-            new Promise((resolve) => {
+            new Promise(resolve => {
                 const responseData = createClient(API_KEY).photos.curated();
                 resolve(responseData);
             })
-            .then((data) => {
-                setResponse(data.photos)
-            })
+                .then(data => {
+                    setResponse(data.photos);
+                });
         }
-    // eslint-disable-next-line react-hooks/exhaustive-deps
     }, []);
     useEffect(() => {
         setTimeout(() => {
             if (count === 0) {
-                setCount(1)
-            }
-            else {
+                setCount(1);
+            } else {
                 if (count + 1 < response.length) {
-                    setCount(prevCount => prevCount + 1)
-                }
-                else {
-                    setCount(0)
+                    setCount(prevCount => prevCount + 1);
+                } else {
+                    setCount(0);
                 }
             }
-        }, 3000)
-    // eslint-disable-next-line react-hooks/exhaustive-deps
+        }, 3000);
     }, [count]);
     const mappedData = response.length > 1 && response.map(
         data => (
             <>
-                <img src={data.src.large2x} alt='ss'/>
+                <img
+                    alt='ss'
+                    src={data.src.large2x}
+                />
             </>
         ));
     const picturedBehind = (images = mappedData) => {
@@ -173,17 +177,23 @@ const HomeImageApiMap = () => {
                 </div>
                 <div className='picture-center'>
                     {images[currentInterval]}
-                        <a href={'/photos'} className='enter-button'>
+                    <a
+                        className='enter-button'
+                        href={'/photos'}
+                    >
                             Enter
-                        </a>
-                    {response.length > 0 && <a className='link' href={response[currentInterval].photographer_url}>{response[currentInterval].photographer}</a>}
+                    </a>
+                    {response.length > 0 && <a
+                        className='link'
+                        href={response[currentInterval].photographer_url}
+                    >{response[currentInterval].photographer}</a>}
                 </div>
                 <div className='picture-right'>
                     {images[endInterval]}
                 </div>
             </div>
         );
-    }
+    };
     return (
         <>
             <ImageStyles>
@@ -191,5 +201,5 @@ const HomeImageApiMap = () => {
             </ImageStyles>
         </>
     );
-}
+};
 export default HomeImageApiMap;

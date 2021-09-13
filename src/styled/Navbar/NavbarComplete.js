@@ -1,27 +1,39 @@
-import React, {useContext} from 'react'
-import StyledNavbarLink from './_basics/StyledNavbarLink'
-import NavbarTransDark from './styles/NavbarTransDark'
+import React, { useContext } from 'react';
+import StyledNavbarLink from './_basics/StyledNavbarLink';
+import NavbarTransDark from './styles/NavbarTransDark';
 import StyledDropGold from '../Dropdown/StyledDropGold';
 import InnerNavMenu from './InnerNavMenu';
-import {Context} from '../../Context';
+import { Context } from '../../Context';
 
 const NavbarComplete = () => {
-    const {navOpen} = useContext(Context);
+    const { navOpen } = useContext(Context);
 
     return (
         <>
             <NavbarTransDark toggleNav={navOpen}>
                 <div className='brand-links'>
                     <div className='brand'>
-                        <i class="fas fa-crown"></i>
+                        <i className="fas fa-crown"></i>
                          Images
                     </div>
-                    <StyledNavbarLink to={'/'} text={'Home'}/>
-                    <StyledNavbarLink to={'/photos'} text={'Photos'}/>
-                    <StyledNavbarLink to={'/videos'} text={'Videos'}/>
+                    <StyledNavbarLink
+                        text={'Home'}
+                        to={'/'}
+                    />
+                    <StyledNavbarLink
+                        text={'Photos'}
+                        to={'/photos'}
+                    />
+                    <StyledNavbarLink
+                        text={'Videos'}
+                        to={'/videos'}
+                    />
                 </div>
-                <div className='menu-side' style={{marginTop: 'auto', marginBottom: 'auto'}}>
-                    <StyledDropGold/>
+                <div
+                    className='menu-side'
+                    style={{ marginTop: 'auto', marginBottom: 'auto' }}
+                >
+                    <StyledDropGold />
                 </div>
                 <div className='toggle-sign-in'>
                     <InnerNavMenu />
@@ -29,6 +41,6 @@ const NavbarComplete = () => {
             </NavbarTransDark>
         </>
     );
-}
+};
 
 export default NavbarComplete;

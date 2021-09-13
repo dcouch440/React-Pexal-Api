@@ -1,5 +1,5 @@
 import React from 'react';
-import {Switch, Route} from 'react-router-dom';
+import { Switch, Route } from 'react-router-dom';
 import Home from './Home/Home';
 import TrendingPhotos from './TrendingPhotos/TrendingPhotos';
 import StyledPageContainer from '../styled/PageContainer/StyledPageContainer';
@@ -10,13 +10,22 @@ const PageRouter = () => (
     <>
         <StyledPageContainer>
             <Switch>
-                <Route exact path={'/'}>
+                <Route
+                    exact
+                    path={'/'}
+                >
                     <Home />
                 </Route>
-                <Route exact path={'/photos'}>
+                <Route
+                    exact
+                    path={'/photos'}
+                >
                     <TrendingPhotos />
                 </Route>
-                <Route exact path={'/videos'}>
+                <Route
+                    exact
+                    path={'/videos'}
+                >
                     <TrendingVideos />
                 </Route>
             </Switch>

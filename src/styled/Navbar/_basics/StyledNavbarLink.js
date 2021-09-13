@@ -1,5 +1,5 @@
-import styled from 'styled-components'
-import BasicNavbarLink from './_BasicNavbarLink'
+import styled from 'styled-components';
+import BasicNavbarLink from './_BasicNavbarLink';
 
 const StyledNavbarLink = styled(BasicNavbarLink)`
     padding: 18px 9px;
@@ -24,5 +24,5 @@ const StyledNavbarLink = styled(BasicNavbarLink)`
         text-shadow: 0px 1px 1px rgba(5, 5, 5, 0.349);
         box-shadow: 0px 2px 0px rgba(86, 90, 76, 0.657);
     }
-`
-export default StyledNavbarLink
+`;
+export default StyledNavbarLink;

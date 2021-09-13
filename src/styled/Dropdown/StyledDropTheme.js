@@ -1,6 +1,6 @@
 import React from 'react';
-import {useTheme} from '../../globalHooks/useTheme';
-import {StyledDropLink} from './styles/StyledDropLink';
+import { useTheme } from '../../globalHooks/useTheme';
+import { StyledDropLink } from './styles/StyledDropLink';
 import styled from 'styled-components';
 
 
@@ -17,10 +17,10 @@ const StyledCog = styled.div`
     }
 `;
 export const StyledDropTheme = () => {
-    const {handleTheme} = useTheme()
+    const { handleTheme } = useTheme();
     const text = () => (
         <StyledCog>
-            <span>Lights <i class="fas fa-lightbulb"></i> </span>
+            <span>Lights <i className="fas fa-lightbulb"></i> </span>
         </StyledCog>
     );
     return (
@@ -29,6 +29,6 @@ export const StyledDropTheme = () => {
             onClick={() => handleTheme()}
         />
     );
-}
+};
 
 export default StyledDropTheme;

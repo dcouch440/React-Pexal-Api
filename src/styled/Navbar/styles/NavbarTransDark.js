@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import {BasicNavbar} from '../_basics/_BasicNavbar';
+import { BasicNavbar } from '../_basics/_BasicNavbar';
 
 const NavbarTransDark = styled(BasicNavbar)`
     box-sizing: border-box;
@@ -29,9 +29,7 @@ const NavbarTransDark = styled(BasicNavbar)`
         @media only screen and (max-width: 670px) {
             padding: 0;
             overflow: hidden;
-            height: ${
-                ({toggleNav}) => toggleNav === false ? '60px' : null
-            };
+            height: ${({ toggleNav }) => toggleNav === false ? '60px' : null};
             -moz-animation: height 2s linear;
             .brand {
                 font-size: 4vw;

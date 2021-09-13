@@ -1,10 +1,10 @@
 import React, { useContext } from 'react';
+import styled from 'styled-components';
 import { Context } from '../../Context';
+import StyledDropTheme from '../Dropdown/StyledDropTheme';
 import { StyledDropLink } from '../Dropdown/styles/StyledDropLink';
 import Login from '../LoginFormStyled/StyledLogin';
-import StyledDropTheme from '../Dropdown/StyledDropTheme';
 import ToggleMenu from './styles/ToggleMenu';
-import styled from 'styled-components';
 
 const Container = styled.div`
     .toggle-button-container {
@@ -20,23 +20,29 @@ const Container = styled.div`
     }
 `;
 
-const InnerNavMenu = ({backgroundColor})  => {
-    const {setNavOpen} = useContext(Context)
-        return (
-            <>
-                <Container>
-                    <div className='hide'>
-                        <div className="toggle-button-container">
-                            <ToggleMenu text={'☰'} onClick={() =>  setNavOpen(prevState => !prevState)}/>
-                        </div>
-                        <Login color={'rgb(218, 165, 32)'} backgroundColor={backgroundColor}/>
-                        <StyledDropLink text={'An option'}/>
-                        <StyledDropLink text={'Another option'}/>
-                        <StyledDropLink text={'One More!'}/>
-                        <StyledDropTheme />
+const InnerNavMenu = ({ backgroundColor })  => {
+    const { setNavOpen } = useContext(Context);
+    return (
+        <>
+            <Container>
+                <div className='hide'>
+                    <div className="toggle-button-container">
+                        <ToggleMenu
+                            text='☰'
+                            onClick={() =>  setNavOpen(prevState => !prevState)}
+                        />
                     </div>
-                </Container>
-            </>
-        );
-}
+                    <Login
+                        backgroundColor={backgroundColor}
+                        color={'rgb(218, 165, 32)'}
+                    />
+                    <StyledDropLink text={'An option'} />
+                    <StyledDropLink text={'Another option'} />
+                    <StyledDropLink text={'One More!'} />
+                    <StyledDropTheme />
+                </div>
+            </Container>
+        </>
+    );
+};
 export default InnerNavMenu;

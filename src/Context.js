@@ -1,7 +1,7 @@
-import React, {useState} from "react";
+import React, { useState } from "react";
 const Context = React.createContext();
 
-const ContextProvider = (props) => {
+const ContextProvider = props => {
     const [navOpen, setNavOpen] = useState(false);
     const [scrollBehavior, setScrollBehavior] = useState(false);
 
@@ -17,9 +17,10 @@ const ContextProvider = (props) => {
             API_KEY,
         }}
         >
-           {props.children}
+            {props.children}
         </Context.Provider>
     );
-}
+};
 
-export {ContextProvider, Context};
+export { ContextProvider, Context };
+

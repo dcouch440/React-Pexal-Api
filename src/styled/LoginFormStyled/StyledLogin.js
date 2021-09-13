@@ -1,7 +1,7 @@
-import React, {useState} from 'react';
-import {StyledGoldButton} from './Styles/StyledGoldButton';
-import {StyledTextInput} from './Styles/StyledTextInput';
+import React, { useState } from 'react';
 import styled from 'styled-components';
+import { StyledGoldButton } from './Styles/StyledGoldButton';
+import { StyledTextInput } from './Styles/StyledTextInput';
 
 const FormStyle = styled.div`
     text-align: center;
@@ -30,20 +30,20 @@ const FormStyle = styled.div`
 `;
 
 
-function StyledLogin({color, backgroundColor}){
+function StyledLogin ({ color, backgroundColor }){
     const [text, setText] = useState({
         email: '',
         password: '',
         checkbox: false
     });
-    const handleSubmit = (event) => {
-        event.preventDefault()
+    const handleSubmit = event => {
+        event.preventDefault();
     };
-    const handleChange = (event) => {
-        const {name, value, type, checked} = event.target
+    const handleChange = event => {
+        const { name, value, type, checked } = event.target;
         type === "checkbox" ?
-            setText({[name]: checked}):
-            setText({[name]: value})
+            setText({ [name]: checked }):
+            setText({ [name]: value });
     };
     const formStyle = {
         color: color,
@@ -51,12 +51,33 @@ function StyledLogin({color, backgroundColor}){
     };
     return (
         <FormStyle>
-            <form style={formStyle} onSubmit={(event) => handleSubmit(event)}>
+            <form
+                style={formStyle}
+                onSubmit={event => handleSubmit(event)}
+            >
                 <br />
-                <StyledTextInput type={'text'} labels='email' value={text.email} onChange={handleChange} placeholder={'Email address' }name={'email'}/>
+                <StyledTextInput
+                    labels='email'
+                    name={'email'}
+                    placeholder={'Email address' }
+                    type={'text'}
+                    value={text.email}
+                    onChange={handleChange}
+                />
                 <p>We will never share your password with anyone.</p>
-                <StyledTextInput type={'password'} labels='password' value={text.password} onChange={handleChange} placeholder={'Password'} name={'password'} />
-                <StyledGoldButton row='end' onClick={(event) => handleSubmit(event)} text={'Submit'} />
+                <StyledTextInput
+                    labels='password'
+                    name={'password'}
+                    placeholder={'Password'}
+                    type={'password'}
+                    value={text.password}
+                    onChange={handleChange}
+                />
+                <StyledGoldButton
+                    row='end'
+                    text={'Submit'}
+                    onClick={event => handleSubmit(event)}
+                />
             </form>
         </FormStyle>
     );

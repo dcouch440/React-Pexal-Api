@@ -1,52 +1,56 @@
-import { useEffect, useReducer, useCallback, useRef } from 'react';
-import { Api } from './Api';
+import {
+    useCallback,
+    useEffect,
+    useReducer,
+    useRef
+} from 'react';
+import { Api } from '../api/Api';
 
-const EverScroll = ({dataType}) => {
-    const {trendingPhoto, trendingVideo} = Api();
+const EverScroll = ({ dataType }) => {
+    const { trendingPhoto, trendingVideo } = Api();
 
     const reducer = (state, action) => {
         switch (action.type) {
-            case 'STACK_DATA':
-                return { ...state, stackData: state.stackData.concat(action.media)}
-            case 'FETCHING_DATA':
-                return { ...state, fetching: action.fetching}
-            default:
-                return state;
+        case 'STACK_DATA':
+            return { ...state, stackData: state.stackData.concat(action.media) };
+        case 'FETCHING_DATA':
+            return { ...state, fetching: action.fetching };
+        default:
+            return state;
         }
-    }
+    };
     const pageReducer = (state, action) => {
         switch (action.type) {
-            case 'ADVANCE_PAGE':
-                return {page: state.page + 1 }
-            default:
-                return state;
+        case 'ADVANCE_PAGE':
+            return { page: state.page + 1 };
+        default:
+            return state;
         }
-    }
+    };
 
-    const [ pager, pagerDispatch ] = useReducer(pageReducer, { page: 1 })
-    const [dataStacked, dataDispatch] = useReducer(reducer, { stackData:[], fetching: true})
+    const [ pager, pagerDispatch ] = useReducer(pageReducer, { page: 1 });
+    const [dataStacked, dataDispatch] = useReducer(reducer, { stackData:[], fetching: true });
 
     useEffect(() => {
-        dataDispatch({type: 'FETCHING_DATA', fetching: true});
-        new Promise((resolve) => {
+        dataDispatch({ type: 'FETCHING_DATA', fetching: true });
+        new Promise(resolve => {
             if (dataType === 'TRENDING_VIDEO') {
-                trendingVideo({perPage: 16, currentPage: pager.page})
-                    .then(data => resolve(data))
+                trendingVideo({ perPage: 16, currentPage: pager.page })
+                    .then(data => resolve(data));
             }
             if (dataType === 'TRENDING_IMAGES') {
-                trendingPhoto({perPage: 16, currentPage: pager.page})
-                    .then(data => resolve(data))
+                trendingPhoto({ perPage: 16, currentPage: pager.page })
+                    .then(data => resolve(data));
             }
         })
-        .then((data) =>  {
-            dataDispatch({type: 'STACK_DATA', media: data})
-            dataDispatch({type: 'FETCHING_DATA', fetching: false})
-        })
-        .catch(e => {
-            dataDispatch({type: 'FETCHING_DATA', fetching: false})
-            return e
-        })
-    // eslint-disable-next-line react-hooks/exhaustive-deps
+            .then(data =>  {
+                dataDispatch({ type: 'STACK_DATA', media: data });
+                dataDispatch({ type: 'FETCHING_DATA', fetching: false });
+            })
+            .catch(e => {
+                dataDispatch({ type: 'FETCHING_DATA', fetching: false });
+                return e;
+            });
     }, [dataDispatch, pager.page]);
 
     let bottomBoundaryRef = useRef(null);
@@ -55,9 +59,9 @@ const EverScroll = ({dataType}) => {
             new IntersectionObserver(entries => {
                 entries.forEach(en => {
                     if (en.intersectionRatio > 0) {
-                        pagerDispatch({ type: 'ADVANCE_PAGE' })
+                        pagerDispatch({ type: 'ADVANCE_PAGE' });
                     }
-                })
+                });
             }).observe(node);
         }, [pagerDispatch]
     );
@@ -68,7 +72,7 @@ const EverScroll = ({dataType}) => {
         }
     }, [scrollObserver, bottomBoundaryRef]);
 
-    const lazyRef = useRef([])
+    const lazyRef = useRef([]);
     const observer = useCallback(node => {
         const intObs = new IntersectionObserver(entries => {
             entries.forEach(en => {
@@ -83,16 +87,16 @@ const EverScroll = ({dataType}) => {
                     }
                     intObs.unobserve(node); // detach the observer when done
                 }
-            })
+            });
         });
-        intObs.observe(node)
+        intObs.observe(node);
     }, []);
 
     useEffect(() => {
-        if (lazyRef.current) lazyRef.current.forEach(data => observer(data))
+        if (lazyRef.current) lazyRef.current.forEach(data => observer(data));
     }, [observer, lazyRef, dataStacked.StackData]);
 
     return [bottomBoundaryRef, lazyRef, dataStacked];
-}
+};
 
 export default EverScroll;
